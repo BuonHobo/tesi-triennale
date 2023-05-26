@@ -128,14 +128,20 @@ It is apparent that the state of the art is underdeveloped when it comes to depl
 
 ### Requirements
 In order to define a risk awareness model, we must first define what its scope and objectives will be.
-As stated earlier, the state of the art is in need of more and more sophisticated solutions to improve safety and efficiency in domains that out of the reach of the design guidelines.
-We identify those domains to be 
 
-## Morphing design patterns into a flexible, general model
+As stated earlier, the state of the art is in need of more and more sophisticated solutions to improve safety and efficiency in domains that are out of the reach of standard design guidelines.
+We identify those domains to be run time and planning time.
 
-### Severity
+Our contribute focuses on providing a solution that is general enough to be applicable to a wide range of HRC scenarios and flexible enough to be used both at plan time and execution time. Flexibility is a very desirable property, since it is what makes HRC great and no safety measures would make sense if it didn't preserve this defining feature of collaborative robots.
 
-### Exposure
+Another crucial requirement is that the model should be built on top of existing and well worn standards and concepts that stood the test of time. We want our solution to be solid and we can only achieve that if it's based on solid foundations. 
+This is why we chose to base this model on the techniques that were previously explored, 
 
-### Avoidance
+### Morphing design patterns into a flexible, general model
+
+#### Severity
+
+#### Exposure
+
+#### Avoidance
 
