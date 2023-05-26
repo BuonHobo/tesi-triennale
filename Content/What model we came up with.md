@@ -42,7 +42,19 @@
 We propose a model consisting of 5 risk factors that describe the safety characteristics of an HRC cell, thus giving collaborative robots a sophisticated risk awareness
 
 ### What they are
-The intrinsic risk value is the direct translation of the severity concept. It is a value that represents how risky a given task is. The r
+The intrinsic risk value is the direct translation of the severity concept. It is a value that represents how risky a given task is. The intrinsic risk value depends exclusively on properties that are only associated to the task itself and that don't change. This value does not depend on how the task is carried out, but just on which task is being carried out.
+Some factors that are included in this value are:
+Is the tool/payload hot, powered, sharp or heavy?
+Is the robot compliant? Does it have any sharp or pointy parts?
+How fine-grained is the control of the robot?
+Is the human operator wearing any protective equipment such as glasses, gloves, etc.?
+How much force and pressure are being applied?
+
+The geometry risk depends on which trajectory the robot is following to carry out its task. The risk value of a trajectory is assigned based on how likely it is for that trajectory to intersect a human body part and which part it is likely to intersect. For example, a path that is likely to intersect the operator's head has a higher geometric risk than a path that might intersect the operator's foot with low probability.
+
+Movement speed is also a risk value, and it intuitively depends on how fast the robot is carrying out its task.
+
+Impact probability is a risk value that depends on how likely it is for the human and robot to be in each other's way. It depends on things like distance, but most importantly it depends on
 
 ### Considerations
 
