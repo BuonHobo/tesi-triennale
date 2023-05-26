@@ -79,4 +79,9 @@ If we don't know what tasks the human is carrying out in the meantime, we can ju
 ## Qualities of the model
 Each one of these values depends on its own specific environmental properties. A nice perk of this representation is that we can act on each of the values in some way. We can reduce the intrinsic risk by swapping the current task with another; we can change the trajectory and speed to reduce geometry risk and movement speed respectively; we can reallocate the tasks to reduce impact probability; we can communicate with the operator to reduce the human uncertainty. This will be elaborated further later on in the paper.
 
-This model uses parameters that are very general and can be applied to almost any scenario, since they are 
+The values are also all between 0 (excluded) and 1 (included), but they're very easy to fine tune according to one's preference in order to ensure a behavior that is closer to the desired one. Admittedly, it might not be easy to fine tune the ranges without a reference and without experimental data. We think that further work could be done in defining a set of guidelines to help users of this model tweak the parameter's values in order to obtain desired qualities. The experiment we talk about later on in the paper could be the first step towards this.
+
+A great new capability of this model is the capability 
+
+This model uses parameters that are very general and can be applied to almost any scenario, since they are derived from the first principles of the standards they're based on. These parameters satisfy our requirements of flexibility and generality quite well. The parameters themselves can be easily reinterpreted in specific situations to better fit a given scenario
+As a proof of the ease with which this model can be applied, we will be showing how we implemented this model in a PLATINUm based planner.
