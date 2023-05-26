@@ -115,18 +115,21 @@ Things like reducing weight and power or using PPE greatly reduces the severity 
 Most of the guidelines and patterns mentioned above are meant to be applied during the design phases of an HRC cell. 
 This is due to the fact that an HRC cell that has already been installed and started is very hard to change when it comes to affecting the shape of the robot, the morphology of the system, the allocation of responsibilities, etc. These solutions can be impractical or even impossible to apply on pre-existing hardware without radically changing the HRC cell into a new, different one.
 
-Furthermore, as a side effect of being mostly meant for the design phases of a collaborative robot, these techniques have a limited reach on a cell's safety properties. They are of course crucial to ensuring a safe collaborative work environment, but they stop providing further safety once the HRC cell is installed and running. This also forces designers to be very conservative when determining the safety of an HRC environment, because they know that the robot will have to avoid harming people in a variety of possibly unforeseen situations. An imbalance towards sa
+Furthermore, as a side effect of being mostly meant for the design phases of a collaborative robot, these techniques have a limited reach on a cell's safety properties. They are of course crucial to ensuring a safe collaborative work environment, but they stop providing further safety once the HRC cell is installed and running. This also forces designers to be very conservative when determining the safety of an HRC environment, because they know that the robot will have to avoid harming people in a variety of possibly unforeseen situations. Over prioritization of safety could severely impact performance in HRC cells.
 
-Of course, some of those safety measures can always be applied later, like providing better personal protective equipment or reducing the operating speed of the machine. Even some of the more complex solutions like safety stops or barriers can be added later, although it's rare to find a cell where those safety measures weren't already used where necessary.
+Of course, some of those safety measures can always be applied later, like providing better personal protective equipment or reducing the operating speed of the machine. Even some of the more complex solutions like safety stops or barriers can be added later, although it's rare to find a cell where those safety measures weren't already used where necessary. An example of a suboptimal posthumous application of safety measures could be the placement of a large barrier between the robot and the human. The barrier solves any risk issue, but it completely destroys any hope of collaboration, which in turn impacts flexibility and efficiency. 
 
 Another very important point could be made against unnecessarily applying excessively strict safety measures in collaborative environments. As stated earlier in the paper, HRC environment are intended as a way to make production toolchains flexible and efficient at a lower cost compared to traditional robots. Unsophisticated safety measures can defeat the point of investing in an HRC cell since they can dramatically impact both the efficiency and the flexibility that collaborative environments are known for.
-As an example, safety stops are both a great way to ensure safety, but frequent safety interruptions can drastically decrease the throughput of an HRC cell.
+As an example, safety stops are both a great way to ensure safety, but frequent safety interruptions can drastically decrease the throughput of an HRC cell. There should be a way to operate the HRC cell such that safety stops are reduced, without impacting the safety of the human.
 
 It is apparent that the state of the art is underdeveloped when it comes to deploying sophisticated, flexible and general solutions to existing HRC cells that allow to strike a balance between safety and efficiency. This is going to be our focus.
 
 ## A new risk awareness model
 
 ### Requirements
+In order to define a risk awareness model, we must first define what its scope and objectives will be.
+As stated earlier, the state of the art is in need of more and more sophisticated solutions to improve safety and efficiency in domains that out of the reach of the design guidelines.
+We identify those domains to be 
 
 ## Morphing design patterns into a flexible, general model
 
