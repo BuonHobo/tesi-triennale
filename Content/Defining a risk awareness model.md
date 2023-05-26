@@ -132,13 +132,20 @@ In order to define a risk awareness model, we must first define what its scope a
 As stated earlier, the state of the art is in need of more and more sophisticated solutions to improve safety and efficiency in domains that are out of the reach of standard design guidelines.
 We identify those domains to be run time and planning time.
 
-Our contribute focuses on providing a solution that is general enough to be applicable to a wide range of HRC scenarios and flexible enough to be used both at plan time and execution time. Flexibility is a very desirable property, since it is what makes HRC great and no safety measures would make sense if it didn't preserve this defining feature of collaborative robots.
+Our contribute focuses on providing a solution that is general enough to be applicable to a wide range of HRC scenarios and flexible enough to be used both at plan time and execution time. Flexibility is a very desirable property, since it is what makes HRC great and no safety measure would make sense if it didn't preserve this defining feature of collaborative robots.
 
 Another crucial requirement is that the model should be built on top of existing and well worn standards and concepts that stood the test of time. We want our solution to be solid and we can only achieve that if it's based on solid foundations. 
-This is why we chose to base this model on the techniques that were previously explored, 
+This is why we chose to base this model on the techniques that were previously explored. 
+
+Our model is heavily based on the concepts of severity, exposure and avoidance, but since those risk factors are meant to be used during the design phases, we are adapting them to fit our previously specified requirements.
 
 ### Morphing design patterns into a flexible, general model
 
+We will now be explaining the process that we used to morph the previously discussed design time guidelines into general and flexible risk factors that can be applied during plan time and execution time
+
+The first factor we're discussing is the most important one: severity.
+Luckily the concept of severity translates really well to our interested domain. 
+Design time severity depends on the tasks that a robot is expected to accomplish and it ends up being a value that generally measures the gravity of any possible accident that may happen with a given HRC 
 #### Severity
 
 #### Exposure
