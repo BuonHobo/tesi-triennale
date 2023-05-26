@@ -59,9 +59,9 @@
         - High exposure means that robot and human are working closely or in highly collaborative tasks
         - Tasks that are far away or less collaborative have less exposure
 
-# The state of the art
+## The state of the art
 
-## Standards
+### Standards
 The [[ANSI_RIA R15.06-2012]] standard is an adoption of pre-existing robot safety standards such as [[ISO 10218-1.2011]] and [[ISO 10218-2.2011]], which focuses on providing HRC cell designers with appropriate guidelines to help them improve the safety of collaborative cells.
 
 Part 5.10 provides some of the safety measures that should be used to ensure a safe collaborative environment, such as safety stop, hand guiding, speed and separation monitoring, power and force limiting.
@@ -74,7 +74,7 @@ Speed and Separation Monitoring is the concept of keeping track of the distance 
 
 Power and Force limiting means designing robots that are incapable of exerting high amounts of force that could hurt human operators. Pressure is also considered in this section, which suggest designing an HRC cell without pinch points, sharp edges and so on. This is very useful in scenarios where human and robot work closely and contact cannot be easily avoided.
 
-## Risk factors
+### Risk factors
 The main risk factors that were highlighted in the standard are, in order of importance, severity, exposure and avoidance.
 
 This allows HRC cell designers to have a more detailed representation of risk than the one based on severity and probability, which is very flat and often prevents us from appreciating the nuances hidden in a scenario and hides them behind a simple value.
@@ -86,7 +86,7 @@ The reason why avoidance is the last of these factors is that it would be unfair
 
 After considering all of these factors, a risk level can be determined and it can assume values such as: negligible, low, medium, high and very high.
 
-## Risk reduction
+### Risk reduction
 The standard suggests using these factors during the design of an HRC cell. The proposed approach is one that involves an iterative process of repeated risk reduction.
 
 First, the use limits of a robot are defined so that designers know the full range of situations that the system might be involved in. Then designers are invited to identify tasks and associated hazards and estimate how risky they are using the aforementioned risk factors. 
@@ -109,20 +109,23 @@ If awareness has already been raised, then it's always a good practice to provid
 It's easy to notice how each of these measures directly impacts on the risk factors that were mentioned above.
 Things like reducing weight and power or using PPE greatly reduces the severity factor, while safeguarding and awareness decrease exposure and avoidance, respectively.
 
-# Unsolved issues
+## Unsolved issues
 
-## Applying design guidelines to HRC cells
+### Applying design guidelines to existing HRC cells
+Most of the guidelines and patterns mentioned above are meant to be applied during the design phases of an HRC cell. Things like changing the robot's shape and responsibilities, or changing the morphology of the system are only ever easy to do on the drawing board. These solutions are very hard or even impossible to use on pre-existing hardware without radically changing the HRC cell into a new, different one.
+
+Furthermore, as a side effect of being mostly meant for the design phases of a collaborative robot, these techniques have a limited impact on a cell's safety characteristics. They are 
 
 
-# A new risk awareness model
+## A new risk awareness model
 
-## Requirements
+### Requirements
 
-# Morphing design patterns into a flexible, general model
+## Morphing design patterns into a flexible, general model
 
-## Severity
+### Severity
 
-## Exposure
+### Exposure
 
-## Avoidance
+### Avoidance
 
