@@ -1,0 +1,60 @@
+- How are people making robots safe right now?
+    - Hierarchy of risk reduction
+        - elimination
+        - substitution
+        - safeguarding
+        - personal protection equipment
+        - awareness
+    - Risk factors
+        - These are shown in the RIA pdf
+        - Mention the ISO, RIA and ANSI standards
+        - Avoidance,
+        - severity,
+        - exposure
+    - Changing shape of robot (or compliant robot)
+    - Putting barriers
+    - Reallocating responsibilities
+    - Sensors
+        - Reaction to sensor data
+        - Slow down, stop (bad for efficiency)
+- These are mostly design guidelines.
+    - We can’t easily apply them to an existing HRC
+        - they are about the shape, role and safety measures
+    - Or if we can, it’s not sophisticated
+        - It’s just a slowdown or a stop, or keeping distance
+        - Safety stops can be frequent since there is no way to plan with safety in mind
+        - Estimated safety parameters prior to execution
+            - They make the designers be over conservative
+    - Some of them decrease collaboration
+        - In the name of safety, some task are never done collaboratively
+        - might be because of the application of those design patterns
+        - might be because of the application of the not sophisticated runtime techniques
+    - We need a better plan-time and run-time solution
+- We want a new risk awareness model
+    - It should be general
+    - It should be flexible
+    - It should be based on a preexisting and tested standard
+- How we morph the “design patterns” into a flexible, general model
+    - Morph design time severity into plan time (or run time) severity
+        - General risk of the scenario becomes a risk value for each task
+        - It is intrinsic to the task itself, not how it is carried out
+            - Which tool
+                - Shape
+                - Powered?
+            - What power
+            - What weight
+            - impact type
+            - impact strength
+    - Morph design time avoidance into …
+        - General avoidance considerations become values that describe the movement of robot and human
+        - We can use the knowledge how robot and human position
+        - robot and human speed
+        - Uncertainty of human movement
+    - Morph design time exposure …
+        - This is about the morphology of the collaborative environment
+            - barriers
+            - protective equipment
+        - Since it’s meant to reduce impact probability, we can just use that
+        - This is where the awareness of which tasks are being executed comes into play
+        - High exposure means that robot and human are working closely or in highly collaborative tasks
+        - Tasks that are far away or less collaborative have less exposure

@@ -1,0 +1,18 @@
+- What’s the general HRC situation
+    - Introduction of collaborative robots in production plants
+    - Collaborative vs not collaborative
+        - Collaboration levels (supportive, etc…)
+    - Major shift in the production environment
+- Opportunities
+    - Cheaper to modernize
+    - Better working environment for humans
+    - Better productivity
+    - Less worker injury
+- Challenges
+    - Safety is hard
+    - Safety is crucial
+    - Efficiency is crucial
+    - Safety and efficiency are hard to join
+- It’s a flourishing field
+    - Solutions are still primordial
+    - We progressively make solutions more sophisticated

@@ -1,0 +1,14 @@
+- Parameters interpretation
+    - Intrinsic risk is the same
+    - Geometry risk and Movement speed are real time
+    - Human uncertainty and Impact probability is real time (sensor data)
+- Hard to use real time data, but it allows great control over safety
+    - Robot motion data (like geometry and speed) can be adjusted in real time
+    - Human motion data can also be adjusted
+        - Signaling danger to the human
+            - lights, sound, voice
+        - Changing the human task
+- Hard limits to risk can be set
+- A lot of configuration possibilities with presets
+- Hard to use sensor data. The technology might not even be there yet
+- Movement override when runtime risk is too high

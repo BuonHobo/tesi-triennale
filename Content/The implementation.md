@@ -1,0 +1,54 @@
+- Extending Planner
+    - decorators
+    - configurations
+- Extending SearchStrategy
+    - enqueue
+    - compare
+    - Domain specific object
+- The NodeRiskPlanner Class
+    - Platinum’s flexibility allows to make a planner just by adding a class
+- The RiskAssessmentSearchStrategy Class
+    - A strategy affects the way a planner gets to the solution
+    - The trivial safe solution is to avoid collaboration entirely
+    - Pareto logic
+- RiskSearchStrategy Class
+    - Risk only
+- MakespanSearchStrategy Class
+    - dumb makespan only
+- PlannerSearchStrategy Class
+    - no risk awareness
+    - already implemented
+    - depth first
+- Risk parameters as Java Enums
+    - FromString constructor
+    - Easy interface with platinum
+- The NodeRiskEvaluator Class
+    - Can be used by any planning strategy
+    - Parses the whole plan into sequences of risk aware tasks
+    - The risk factor of each robot task uses the weighted average of the parallel human tasks
+    - All the data it produces:
+        - average risk
+        - max risk
+        - possible collisions
+        - best makespan
+        - human makespan
+        - best robot makespan
+        - estimated robot makespan
+        - robot tasks
+        - human tasks
+    - Evaluates Risk
+    - Evaluates Makespan
+- The python ddl generator
+    - Flexible and easy to configure
+        - more kinds of tasks
+        - tweak amount of tasks
+        - tweak allocation constraints
+        - tweak trajectories, speeds and risk values
+    - Modular
+- The DataCollector Class
+    - Start it and leave it
+    - Get a detailed css
+        - it collects time to plan
+- The python chart generator
+    - Define a set of functions, each one makes a graph
+    - Just upload the css file and it automatically generates graphs

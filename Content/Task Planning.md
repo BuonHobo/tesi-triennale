@@ -1,0 +1,18 @@
+- We used AI planning (briefly)
+    - What is AI planning
+    - How it works
+- Timeline based planning
+    - How it works (model, problem)
+    - Advantages
+    - Disadvantages
+- PLATINUm
+    - Implementation of timeline is based planning
+    - Scalability
+    - Flexibility
+    - Java
+        - DDL and PDL
+            - Domain components
+            - Constraints
+            - Transition between state values
+            - parameters
+            - goal component
