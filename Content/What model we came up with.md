@@ -54,8 +54,11 @@ The geometry risk depends on which trajectory the robot is following to carry ou
 
 Movement speed is also a risk value, and it intuitively depends on how fast the robot is carrying out its task.
 
-Impact probability is a risk value that depends on how likely it is for the human and robot to be in each other's way. It depends on things like distance, but most importantly it depends on
+Impact probability is a risk value that depends on how likely it is for the human and robot to be in each other's way. It depends on things like distance, but most importantly it depends on which tasks are being carried out at the same time. This is the value that most closely translates to exposure. Impact probability is high not only if human and robot are close together, but most importantly, it's high if they're accomplishing a strictly collaborative task.
+
+The last risk value is human uncertainty. This value represents the concept of avoidance (along with geometry risk and movement speed) and it is higher when the system is less certain about the human's movement or intention. As an example, human uncertainty is higher when the operator is walking rather than when it's standing still. More importantly, human uncertainty can also encapsulate finer concepts such as human awareness of human expertise. If the operator is known to be aware of the robot moving next to them, then we can assume the uncertainty to be lower. Likewise, if the operator is experienced, we can assume their uncertainty to be lower.
 
 ### Considerations
+As stated above, the impact probability and human uncertainty values depend heavily what we know about the operator, like what is he doing or how experienced he is.
 
 ## Qualities of the model
