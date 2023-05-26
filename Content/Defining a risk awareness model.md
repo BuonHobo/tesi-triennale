@@ -153,8 +153,12 @@ the weight of the robot and/or its carried payload;
 the kind of impact it could have on the human limbs (pinch, press, tear, etc.);
 
 Exposure is definitely harder to translate into our domain. It is a concept that inherently refers to static things like barriers, so it's not an immediate transition into plan time and run time.
-If we go to the root of what the concept of exposure means in HRC cells, we can see that it is a metric intended to 
-#### Exposure
+If we go to the root of what the concept of exposure means in HRC cells, we can see that it is a metric intended to reduce impact probability by making it hard for human and robot to be in the same place at the same time.
+It is definitely possible to reshape this concept so that we can use it in our model. Since we can't reduce the probability of impact with physical devices, we used software. We can interpret the exposure as the awareness of which tasks are being executed at the same time by the human and the robot. For example, the exposure is high if human and robot are both working on the same task or on two highly collaborative tasks that are close together.
+Our risk aware model uses the knowledge of the tasks being carried out by the robot and the human to avoid the probability of being in the same place, which is exactly what exposure is meant to measure.
 
+Design time avoidance heavily depends on the human's properties, like position, range of movement and speed.
+These general avoidance considerations become precise values that describe the movement of robot and human relative to each other. It is possible to calculate the avoidance using the knowledge of the position and speed of robot and human. 
+Since this value highly depends on the human
 #### Avoidance
 
