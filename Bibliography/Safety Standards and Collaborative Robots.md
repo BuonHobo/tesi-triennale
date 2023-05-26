@@ -1,0 +1,8 @@
+- Author: Pat Davison
+- Title: Safety Standards and Collaborative Robots
+- Organization: Robotic Industries Association
+- Address: 900 Victors Way #140, Ann Arbor, MI 48108
+- Phone: 734-929-3269
+- Email: pdavison@robotics.org
+- Website: www.robotics.org
+- Source: [HRC Safety RIA.pdf](https://file.notion.so/f/s/1a005258-92a5-4945-9f7b-37463eb6134e/HRC_Safety_RIA_.pdf?id=85cfa68a-226c-4ea6-84be-abd55e21517b&table=block&spaceId=1e025ade-3fe8-4471-bd9a-a30d74241629&expirationTimestamp=1685204556394&signature=59lzKPqrikosbWB44i5Q2qSqKVjUmTxe2QEc3wovm0I&downloadName=HRC+Safety+RIA+.pdf)
