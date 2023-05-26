@@ -143,11 +143,17 @@ Our model is heavily based on the concepts of severity, exposure and avoidance, 
 
 We will now be explaining the process that we used to morph the previously discussed design time guidelines into general and flexible risk factors that can be applied during plan time and execution time
 
-The first factor we're discussing is the most important one: severity.
-Luckily the concept of severity translates really well to our interested domain. 
-Design time severity depends on the tasks that a robot is expected to accomplish and it ends up being a value that generally measures the gravity of any possible accident that may happen with a given HRC 
-#### Severity
+The first factor we're discussing is the most important one: severity. Luckily the concept of severity translates really well to our interested domain. 
+Design time severity depends on the tasks that a robot is expected to accomplish and it ends up being a value that generally measures the gravity of any possible accident that may happen with a given collaborative robot.
+Our concept of severity is more precise, and it is associated to the risk value of each specific task. Just like the design guideline, our concept of safety depends on the task itself and not on how it is carried out, so we could say that it is an intrinsic property of the task at hand.
+A task's severity depends on things like:
+the tool being used (is it powered,? is it sharp?);
+the power of the robot;
+the weight of the robot and/or its carried payload;
+the kind of impact it could have on the human limbs (pinch, press, tear, etc.);
 
+Exposure is definitely harder to translate into our domain. It is a concept that inherently refers to static things like barriers, so it's not an immediate transition into plan time and run time.
+If we go to the root of what the concept of exposure means in HRC cells, we can see that it is a metric intended to 
 #### Exposure
 
 #### Avoidance
