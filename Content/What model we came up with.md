@@ -58,7 +58,16 @@ Impact probability is a risk value that depends on how likely it is for the huma
 
 The last risk value is human uncertainty. This value represents the concept of avoidance (along with geometry risk and movement speed) and it is higher when the system is less certain about the human's movement or intention. As an example, human uncertainty is higher when the operator is walking rather than when it's standing still. More importantly, human uncertainty can also encapsulate finer concepts such as human awareness of human expertise. If the operator is known to be aware of the robot moving next to them, then we can assume the uncertainty to be lower. Likewise, if the operator is experienced, we can assume their uncertainty to be lower.
 
-### Considerations
-As stated above, the impact probability and human uncertainty values depend heavily what we know about the operator, like what is he doing or how experienced he is.
+### How they are used
+As stated above, the impact probability and human uncertainty values depend heavily on what we know about the operator, like what is he doing or how experienced he is. It is very easy, though, to apply heuristics to these parameters by assuming values such as worst case, best case or other more sophisticated logics.
+
+By default, these values are included in the (0,1] interval, so that each of them has equal weight in calculating a final risk value for a given task.
+
+The final risk value is calculated by multiplying all the values together. To be more specific:
+
+A scenario has a set of tasks A that the robot might carry out. The `i-th` task in `A` can be executed with a set of distinct trajectories `T` (each of them with its own risk factor)
+
 
 ## Qualities of the model
+
+Each one of these values depends on its own specific environmental properties. A nice perk of this representation is that...

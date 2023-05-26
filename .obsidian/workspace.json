@@ -20,24 +20,6 @@
             }
           }
         ]
-      },
-      {
-        "id": "6bf40b29039bfdf6",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "250a9993567e134a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Content/What model we came up with.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          }
-        ]
       }
     ],
     "direction": "vertical"
@@ -163,7 +145,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "250a9993567e134a",
+  "active": "25891c8b2c7f9703",
   "lastOpenFiles": [
     "Content/Defining a risk awareness model.md",
     "Content/What model we came up with.md",
