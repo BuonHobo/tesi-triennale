@@ -70,7 +70,7 @@ In order to define a risk awareness model, we must first define what its scope a
 As stated earlier, the state of the art is in need of more and more sophisticated solutions to improve safety and efficiency in domains that are out of the reach of standard design guidelines.
 We identify those domains to be run time and planning time.
 
-Our contribution focuses on providing a solution that is general enough to be applicable to a wide range of HRC scenarios and flexible enough to be used both at plan time and execution time. Flexibility is a very desirable property since it is what makes HRC great, and no safety measure would make sense if it didn't preserve this defining feature of collaborative robots.
+Our contribution focuses on providing a solution that is general enough to be applicable to a wide range of HRC scenarios and flexible enough to be used both at plan time and execution time. Flexibility is a very desirable property, since it is what makes HRC great, and no safety measure would make sense if it didn't preserve this defining feature of collaborative robots.
 
 Another crucial requirement is that the model should be built on top of existing and well-worn standards and concepts that stood the test of time. We want our solution to be solid, and we can only achieve that if it's based on solid foundations. 
 This is why we chose to base this model on the techniques that were previously explored. 
@@ -85,7 +85,7 @@ The first factor we're discussing is the most important one: severity. Luckily, 
 Design time severity depends on the tasks that a robot is expected to accomplish, and it ends up being a value that generally measures the gravity of any possible accident that may happen with a given collaborative robot.
 Our concept of severity is more precise, and it is associated to the risk value of each specific task. Just like the design guideline, our concept of safety depends on the task itself and not on how it is carried out, so we could say that it is an intrinsic property of the task at hand.
 A task's severity depends on things like:
-the tool being used (is it powered,? is it sharp?);
+the tool being used (is it powered? Is it sharp?);
 the power of the robot;
 the weight of the robot and/or its carried payload;
 the kind of impact it could have on the human limbs (pinch, press, tear, etc.);
@@ -95,7 +95,7 @@ If we go to the root of what the concept of exposure means in HRC cells, we can 
 It is definitely possible to reshape this concept so that we can use it in our model. Since we can't reduce the probability of impact with physical devices, we used software. We can interpret the exposure as the awareness of which tasks are being executed at the same time by the human and the robot. For example, the exposure is high if human and robot are both working on the same task or on two highly collaborative tasks that are close together.
 Our risk aware model uses the knowledge of the tasks being carried out by the robot and the human to avoid the probability of being in the same place, which is exactly what exposure is meant to measure.
 
-Design time avoidance heavily depends on the human's properties, like position, range of movement and speed.
+Design time avoidance heavily depends on the human properties, like position, range of movement and speed.
 These general avoidance considerations become precise values that describe the movement of robot and human relative to each other. It is possible to calculate the avoidance using the knowledge of the position and speed of robot and human. 
 Since this value highly depends on the human, we decided to make the avoidance value also dependent on how uncertain the human's movement is at a given time.
 

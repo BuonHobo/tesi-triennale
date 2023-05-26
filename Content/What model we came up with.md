@@ -39,12 +39,10 @@
         - Guidelines or automated tools for fine tuning could be worked on
 
 ## The 5 risk factors
-
 We propose a model consisting of 5 risk factors that describe the safety characteristics of an HRC cell, thus giving collaborative robots a sophisticated risk awareness
 
-### What are they
-
-The first risk level 
+### What they are
+The intrinsic risk value is the direct translation of the severity concept. It is a value that represents how risky a given task is. The r
 
 ### Considerations
 
