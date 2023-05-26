@@ -112,9 +112,14 @@ Things like reducing weight and power or using PPE greatly reduces the severity 
 ## Unsolved issues
 
 ### Applying design guidelines to existing HRC cells
-Most of the guidelines and patterns mentioned above are meant to be applied during the design phases of an HRC cell. Things like changing the robot's shape and responsibilities, or changing the morphology of the system are only ever easy to do on the drawing board. These solutions are very hard or even impossible to use on pre-existing hardware without radically changing the HRC cell into a new, different one.
+Most of the guidelines and patterns mentioned above are meant to be applied during the design phases of an HRC cell. 
+This is due to the fact that an HRC cell that has already been installed and started is very hard to change when it comes to affecting the shape of the robot, the morphology of the system, the allocation of responsibilities, etc. These solutions can be impractical or even impossible to apply on pre-existing hardware without radically changing the HRC cell into a new, different one.
 
-Furthermore, as a side effect of being mostly meant for the design phases of a collaborative robot, these techniques have a limited impact on a cell's safety characteristics. They are 
+Furthermore, as a side effect of being mostly meant for the design phases of a collaborative robot, these techniques have a limited reach on a cell's safety properties. They are of course crucial to ensuring a safe collaborative work environment, but they stop providing further safety once the HRC cell is installed and running.
+
+Of course, some of those safety measures can always be applied later, like providing better personal protective equipment or reducing the operating speed of the machine. Even some of the more complex solutions like safety stops or barriers can be added later, although it's rare to find a cell where those safety measures weren't already used where necessary.
+
+Another very important point could be made against unnecessarily applying excessively strict safety measures in collaborative environments. As stated earlier
 
 
 ## A new risk awareness model
