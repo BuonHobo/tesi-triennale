@@ -37,3 +37,11 @@
     - The robot can be more careful when working with unexperienced people
     - Can be fine tuned, although not very easily
         - Guidelines or automated tools for fine tuning could be worked on
+
+## The 5 risk factors
+
+### What are they
+
+### Considerations
+
+## Qualities of the model

@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "2c747171c6a9a0c0",
@@ -149,6 +148,7 @@
   },
   "active": "25891c8b2c7f9703",
   "lastOpenFiles": [
+    "Content/What model we came up with.md",
     "Content/Defining a risk awareness model.md",
     "Index.md",
     "Bibliography/Safety Standards and Collaborative Robots.md",
@@ -170,7 +170,6 @@
     "Content/The implementation.md",
     "Content/Applying the model at plan time.md",
     "Content/Applying the model at run time.md",
-    "Content/What model we came up with.md",
     "Content/Task Planning.md",
     "Content",
     "Untitled 1.canvas",

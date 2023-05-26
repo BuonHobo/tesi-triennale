@@ -1,64 +1,3 @@
-- How are people making robots safe right now?
-    - Hierarchy of risk reduction.
-        - elimination.
-        - substitution.
-        - safeguarding.
-        - personal protection equipment.
-        - awareness.
-    - Risk factors.
-        - These are shown in the RIA pdf.
-        - Mention the ISO, RIA and ANSI standards.
-        - Avoidance,.
-        - severity,.
-        - exposure.
-    - Changing shape of robot (or compliant robot).
-    - Putting barriers.
-    - Reallocating responsibilities.
-    - Sensors
-        - Reaction to sensor data
-        - Slow down, stop (bad for efficiency)
-- These are mostly design guidelines.
-    - We can’t easily apply them to an existing HRC
-        - they are about the shape, role and safety measures
-    - Or if we can, it’s not sophisticated
-        - It’s just a slowdown or a stop, or keeping distance
-        - Safety stops can be frequent since there is no way to plan with safety in mind
-        - Estimated safety parameters prior to execution
-            - They make the designers be over conservative
-    - Some of them decrease collaboration
-        - In the name of safety, some task are never done collaboratively
-        - might be because of the application of those design patterns
-        - might be because of the application of the not sophisticated runtime techniques
-    - We need a better plan-time and run-time solution
-- We want a new risk awareness model
-    - It should be general
-    - It should be flexible
-    - It should be based on a preexisting and tested standard
-- How we morph the “design patterns” into a flexible, general model
-    - Morph design time severity into plan time (or run time) severity
-        - General risk of the scenario becomes a risk value for each task
-        - It is intrinsic to the task itself, not how it is carried out
-            - Which tool
-                - Shape
-                - Powered?
-            - What power
-            - What weight
-            - impact type
-            - impact strength
-    - Morph design time avoidance into …
-        - General avoidance considerations become values that describe the movement of robot and human
-        - We can use the knowledge how robot and human position
-        - robot and human speed
-        - Uncertainty of human movement
-    - Morph design time exposure …
-        - This is about the morphology of the collaborative environment
-            - barriers
-            - protective equipment
-        - Since it’s meant to reduce impact probability, we can just use that
-        - This is where the awareness of which tasks are being executed comes into play
-        - High exposure means that robot and human are working closely or in highly collaborative tasks
-        - Tasks that are far away or less collaborative have less exposure
-
 ## The state of the art
 
 ### Standards
@@ -109,9 +48,8 @@ If awareness has already been raised, then it's always a good practice to provid
 It's easy to notice how each of these measures directly impacts on the risk factors that were mentioned above.
 Things like reducing weight and power or using PPE greatly reduces the severity factor, while safeguarding and awareness decrease exposure and avoidance, respectively.
 
-## Unsolved issues
+## Application to preexisting HRC cells
 
-### Applying design guidelines to existing HRC cells
 Most of the guidelines and patterns mentioned above are meant to be applied during the design phases of an HRC cell. 
 This is due to the fact that an HRC cell that has already been installed and started is very hard to change when it comes to affecting the shape of the robot, the morphology of the system, the allocation of responsibilities, etc. These solutions can be impractical or even impossible to apply on pre-existing hardware without radically changing the HRC cell into a new, different one.
 
@@ -159,6 +97,6 @@ Our risk aware model uses the knowledge of the tasks being carried out by the ro
 
 Design time avoidance heavily depends on the human's properties, like position, range of movement and speed.
 These general avoidance considerations become precise values that describe the movement of robot and human relative to each other. It is possible to calculate the avoidance using the knowledge of the position and speed of robot and human. 
-Since this value highly depends on the human
-#### Avoidance
+Since this value highly depends on the human, we decided to make the avoidance value also dependent on how uncertain the human's movement is at a given time.
 
+In the next chapters, we will explain exactly how the model works.
