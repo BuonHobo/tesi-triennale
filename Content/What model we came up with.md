@@ -65,7 +65,12 @@ By default, these values are included in the (0,1] interval, so that each of the
 
 The final risk value is calculated by multiplying all the values together. To be more specific:
 
-A scenario has a set of tasks A that the robot might carry out. The `i-th` task in `A` can be executed with a set of distinct trajectories `T` (each of them with its own risk factor)
+A scenario has a set of tasks $A$ that the robot might carry out. The $i$-th task in $A$ can be executed with a set of distinct trajectories $T_i$ (each of them with its own risk factor $t_{i,j}$).
+Each of the trajectories can be followed with one of the speed values in the set $V_{i,j}$ (each of them with its own risk factor $v_{i,j,k}$).
+Each of the tasks in $A$ has a set of tasks $P_i$ that can be carried out concurrently by the human (each of those with its own risk factor $p_{i,n}$)
+Each of the tasks in $A$ also has its own level of intrinsic risk $a_i$.
+The operator that is being considered in the given scenario can have one of many uncertainty values inside $U$, we can assume for simplicity that in the scenario at hand the operator always has the uncertainty value $u$ which depends on their expertise level.
+
 
 
 ## Qualities of the model
