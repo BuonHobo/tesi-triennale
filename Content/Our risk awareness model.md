@@ -1,43 +1,3 @@
-- Explanation of the five risk values
-    - What they mean
-        - Intrinsic risk
-            - what tool/payload?
-                - hot
-                - powered
-                - sharp
-                - heavy
-            - what kind of robot?
-                - compliant
-                - pointy parts
-                - fine grained control
-            - Is there any protective equipment?
-                - gloves, glasses, etc
-            - Force or pressure?
-        - Geometry risk
-            - Could the robot hit a human by following this trajectory?
-            - Which part?
-        - Movement speed
-            - How fast is the robot moving?
-        - Impact probability
-            - How close is the robot to the human?
-            - What is the human doing?
-        - Human uncertainty
-            - How experienced is the human?
-            - How much is he moving?
-            - How experienced is he?
-            - Is he aware of the robot?
-    - (0,1] interval, but could be changed
-    - Heuristics can be done when we don’t know impact probability or human uncertainty
-    - Each one of these values can be modified in some way
-        - We have agency over the risk of the situation
-- Qualities
-    - It can be applied anywhere
-    - Parameters can be reinterpreted to better fit a given scenario
-    - Can reduce the amount of safety stops and slow downs
-    - The robot can be more careful when working with unexperienced people
-    - Can be fine tuned, although not very easily
-        - Guidelines or automated tools for fine tuning could be worked on
-
 ## The 5 risk factors
 We propose a model consisting of 5 risk factors that describe the safety characteristics of an HRC cell, thus giving collaborative robots a sophisticated risk awareness
 
@@ -79,9 +39,11 @@ If we don't know what tasks the human is carrying out in the meantime, we can ju
 ## Qualities of the model
 Each one of these values depends on its own specific environmental properties. A nice perk of this representation is that we can act on each of the values in some way. We can reduce the intrinsic risk by swapping the current task with another; we can change the trajectory and speed to reduce geometry risk and movement speed respectively; we can reallocate the tasks to reduce impact probability; we can communicate with the operator to reduce the human uncertainty. This will be elaborated further later on in the paper.
 
-The values are also all between 0 (excluded) and 1 (included), but they're very easy to fine tune according to one's preference in order to ensure a behavior that is closer to the desired one. Admittedly, it might not be easy to fine tune the ranges without a reference and without experimental data. We think that further work could be done in defining a set of guidelines to help users of this model tweak the parameter's values in order to obtain desired qualities. The experiment we talk about later on in the paper could be the first step towards this.
+Being aware of risk is a crucial feature for both efficiency and safety. A robot that is aware of safety can make better informed decisions on when to perform safety stops, thus reducing the amount of unnecessary interruptions. Risk awareness at planning time could even allow a scheduler to come up with a plan which will lead to fewer collisions and less safety stops and slow-downs, greatly improving efficiency and safety. We will explore a proof of concept implementation of this planner later on in the paper.
 
-A great new capability of this model is the capability 
+The values are also all between 0 (excluded) and 1 (included), but they're very easy to fine tune according to one's preference in order to ensure a behavior that is closer to the desired one. Admittedly, it might not be easy to fine tune the ranges without a reference and without experimental data. We think that further work could be done in defining a set of guidelines to help users of this model tweak the parameter's values in order to obtain desired qualities. The experiment we talk about later on in the paper could be the first step towards this. Future work could even go towards the creation of automated tools that help users tune these parameters to achieve precise goals and respect various safety constraints.
+
+A great new quality of this model is the capability to be aware of the human's experience level. This will allow future implementations to make robots that dynamically adjust their behaviors in order to be more prudent in the presence of inexperienced operators such as trainees or civilians.
 
 This model uses parameters that are very general and can be applied to almost any scenario, since they are derived from the first principles of the standards they're based on. These parameters satisfy our requirements of flexibility and generality quite well. The parameters themselves can be easily reinterpreted in specific situations to better fit a given scenario
 As a proof of the ease with which this model can be applied, we will be showing how we implemented this model in a PLATINUm based planner.

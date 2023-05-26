@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Content/What model we came up with.md",
+                "file": "Content/Our risk awareness model.md",
                 "mode": "source",
                 "source": false
               }
@@ -31,7 +31,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Content/What model we came up with.md",
+                "file": "Content/Our risk awareness model.md",
                 "mode": "source",
                 "source": false
               }
@@ -103,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Content/What model we came up with.md",
+                "file": "Content/Our risk awareness model.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Content/What model we came up with.md",
+                "file": "Content/Our risk awareness model.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -143,7 +143,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Content/What model we came up with.md"
+                "file": "Content/Our risk awareness model.md"
               }
             }
           }
@@ -163,11 +163,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "6ddcd9a8e99be55e",
+  "active": "25891c8b2c7f9703",
   "lastOpenFiles": [
-    "Content/Defining a risk awareness model.md",
-    "Content/What model we came up with.md",
     "Index.md",
+    "Content/Our risk awareness model.md",
+    "Content/Defining a risk awareness model.md",
     "Bibliography/Safety Standards and Collaborative Robots.md",
     "Bibliography/ANSI_RIA R15.06-2012.md",
     "Bibliography/ISO TS 15066.2016.md",

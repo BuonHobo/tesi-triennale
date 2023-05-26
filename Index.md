@@ -2,7 +2,7 @@
 2. [[HRC]]
 3. [[Task Planning]]
 4. [[Defining a risk awareness model]]
-5. [[What model we came up with]]
+5. [[Our risk awareness model]]
 6. [[Applying the model at run time]]
 7. [[Applying the model at plan time]]
 8. [[The implementation]]
