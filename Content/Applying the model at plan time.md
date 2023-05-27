@@ -41,7 +41,7 @@ We will be referring to the time it takes to carry out a task (or a plan) with t
 Makespan data can be derived at plan time from the trajectory and movement speed data that we are also using to assess the risk value. The trajectory data includes the expected distance that the robot has to travel to accomplish a task, and the movement speed tells us how much time the robot will take to follow the complete trajectory. This is the simplest way to make an estimate of the makespan of the robot's tasks. More sophisticated techniques could be used for this, an example could be taking into account the collisions that the robot might have with the human and penalizing those tasks. 
 The makespan of human tasks, on the other hand, can be estimated with data such as task type and experience level. Simpler strategies could be used to evaluate this, as well as more sophisticated ones.
 
-
+The estimated makespan can be used in a Pareto optimization when comparing different nodes during the plan time search for a feasible schedule. Different strategies can be used in the Pareto optimization, with widely varying degrees of complexity. We will show the one we used later on in the paper. As a rule of thumb, they all generally start by checking dominance conditions, which indicate when a plan is both safer and more efficient. If there is no clear superiority, then we can deploy all kinds of smart decision logic to find the final plan that better resembles what we want it to be. This represents one of the most critical components of a plan time implementation of this model. The Pareto logic in use can dramatically affect the schedules that the planner will come up with.
 
 ## Qualities
 

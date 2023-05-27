@@ -20,15 +20,15 @@
     "Index.md": {
       "isDirectory": false,
       "noteCount": 1,
-      "wordCount": 80,
-      "pageCount": 0.26666666666666666,
-      "characterCount": 599,
-      "nonWhitespaceCharacterCount": 519,
-      "linkCount": 12,
+      "wordCount": 34,
+      "pageCount": 0.11333333333333333,
+      "characterCount": 285,
+      "nonWhitespaceCharacterCount": 252,
+      "linkCount": 0,
       "embedCount": 12,
       "createdDate": 1685115943688,
-      "modifiedDate": 1685195252135,
-      "sizeInBytes": 599
+      "modifiedDate": 1685195416958,
+      "sizeInBytes": 285
     },
     "Content/The implementation.md": {
       "isDirectory": false,
@@ -59,15 +59,15 @@
     "Content/Task Planning.md": {
       "isDirectory": false,
       "noteCount": 1,
-      "wordCount": 63,
-      "pageCount": 0.21,
-      "characterCount": 464,
-      "nonWhitespaceCharacterCount": 298,
+      "wordCount": 69,
+      "pageCount": 0.23,
+      "characterCount": 505,
+      "nonWhitespaceCharacterCount": 329,
       "linkCount": 0,
       "embedCount": 0,
       "createdDate": 1685116152223,
-      "modifiedDate": 1685116199151,
-      "sizeInBytes": 464
+      "modifiedDate": 1685197647298,
+      "sizeInBytes": 505
     },
     "Content/Support material.md": {
       "isDirectory": false,
@@ -176,15 +176,15 @@
     "Content/Applying the model at plan time.md": {
       "isDirectory": false,
       "noteCount": 1,
-      "wordCount": 882,
-      "pageCount": 2.94,
-      "characterCount": 5282,
-      "nonWhitespaceCharacterCount": 4322,
+      "wordCount": 1298,
+      "pageCount": 4.326666666666667,
+      "characterCount": 7633,
+      "nonWhitespaceCharacterCount": 6251,
       "linkCount": 0,
       "embedCount": 0,
       "createdDate": 1685116411446,
-      "modifiedDate": 1685195006022,
-      "sizeInBytes": 5288
+      "modifiedDate": 1685198077485,
+      "sizeInBytes": 7639
     },
     "Bibliography/Safety Standards and Collaborative Robots.md": {
       "isDirectory": false,
