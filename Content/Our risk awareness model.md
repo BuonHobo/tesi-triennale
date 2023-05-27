@@ -21,7 +21,7 @@ The last risk value is human uncertainty. This value represents the concept of a
 ### How they are used
 As stated above, the impact probability and human uncertainty values depend heavily on what we know about the operator, like what is he doing or how experienced he is. It is very easy, though, to apply heuristics to these parameters by assuming values such as worst case, best case or other more sophisticated logics.
 
-By default, these values are included in the (0,1] interval, so that each of them has equal weight in calculating a final risk value for a given task.
+By default, these values are included in the \[0,1] interval, so that each of them has equal weight in calculating a final risk value for a given task.
 
 The final risk value is calculated by multiplying all the values together. To be more specific:
 
