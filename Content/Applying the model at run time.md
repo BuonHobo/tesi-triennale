@@ -10,8 +10,9 @@
         - Changing the human task
 - Hard limits to risk can be set
 - A lot of configuration possibilities with presets
-- Hard to use sensor data. The technology might not even be there yet
 - Movement override when runtime risk is too high
+- Hard to use sensor data. The technology might not even be there yet
+
 
 ## Interpreting the parameters
 The five risk factors from the proposed method are fairly easy to apply to run time implementations of the model. All it takes is some further interpretation of what each parameter means by defining ways to calculate it and ways to influence it to reduce risk.
@@ -31,6 +32,8 @@ Human uncertainty can be estimated using known data about the operator like expe
 With the risk values above, a robot has sophisticated awareness of how risky a given situation is. It is not only aware of a flat general risk assessment value, but it also knows what exactly is making the situation unsafe, and it knows how to act in order to solve the issue. The robot has a broad range of actions that it can perform to avoid dealing damage to the human operator working next to it. We suggest using the same hierarchy that the mentioned standard provides when trying to curb risk. Start from trying to reduce severity and then make your way towards reducing exposure and avoidance. This is the best way to reduce risk since you are acting on the most impactful factors first. The robot's capability to dynamically and intelligently respond to precise risk factors of a given situation is a strikingly useful feature of this application. It is crucial for an HRC robot to have agency over the risk of a situation, and this technique allows for this agency to be applied to any kind of HRC robot.
 
 We feel the need to stress that agency does not have to be limited to curbing severity and exposure, but it is possible to come up with appropriate ways to also improve factors like avoidance in nontrivial ways. A trivial way to improve avoidance would be reducing the robot's speed, but it comes with drawback, and it is best to do only when necessary. 
-Besides reallocating the tasks so that the human is not in the way of the robot, we emphasize the possibility of using sound and visual signals to have a proper communication with the operator. Nowadays, it is easier than ever for robots to communicate with humans thanks to the recent staggering progress on AI language models and it would make sense to apply these advancements to HRC environments. 
+Besides reallocating the tasks so that the human is not in the way of the robot, we emphasize the possibility of using sound and visual signals to have a proper communication with the operator. Nowadays, it is easier than ever for robots to communicate with humans thanks to the recent staggering progress in AI language models, and it would make sense to apply these advancements to HRC environments. An HRC robot should give a steady stream of information to the human operator about what it is about to do, this is also what makes human to human collaboration work so well.
+
+If the risk value gets too high, a robot has the capability of performing the safety stops that we mentioned earlier. The robot can make an informed decision that allows it to avoid stopping when it is not necessary. Future work could go into implementing more sophisticated techniques of movement override
 
 An immediately apparent characteristic of this application is that it is heavily dependent on sensor data. This is what makes it so flexible and general, but it also means that it may be hard to implement. Sensor data is a tricky subject, accurate sensors are expensive and the state of the art is only just starting to come up with advanced situational awareness techniques based on sensor feeds.
