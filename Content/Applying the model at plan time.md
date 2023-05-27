@@ -21,7 +21,9 @@
 ## Interpreting the parameters
 Just like with the run time application, we're gonna start reinterpreting the risk factors in a way that makes the most sense in the plan time domain.
 
-Intrinsic risk 
+Intrinsic risk still depends on the task that is being carried out. Since we're using this data during the planning phase we are already aware of which tasks we're scheduling, so we can assume that this value is known at all times. 
+
+Geometric risk depends on which of the possible trajectories the robot is following to carry out a given task. This is also data that the planner has to be aware of in order to find a suitable schedule. The planner knows what trajectory the robot will follow, but how will the associated risk factor be estimated? Our proposed interpretation involves using a table of precompiled data about the set of tasks, trajectories, and movement speeds available to the planner.
 
 ## Accounting for efficiency
 
