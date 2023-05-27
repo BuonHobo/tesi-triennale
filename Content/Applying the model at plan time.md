@@ -19,9 +19,18 @@
     - Guidelines or automated tools for compiling data could be worked on
 
 ## Interpreting the parameters
+Just like with the run time application, we're gonna start reinterpreting the risk factors in a way that makes the most sense in the plan time domain.
+
+Intrinsic risk 
 
 ## Accounting for efficiency
 
 ## Qualities
+
+### Advantages
+
+### Disadvantages
+
+### Other work
 
 
