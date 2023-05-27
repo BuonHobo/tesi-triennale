@@ -20,15 +20,15 @@
     "Index.md": {
       "isDirectory": false,
       "noteCount": 1,
-      "wordCount": 46,
-      "pageCount": 0.15333333333333332,
-      "characterCount": 312,
-      "nonWhitespaceCharacterCount": 267,
+      "wordCount": 80,
+      "pageCount": 0.26666666666666666,
+      "characterCount": 599,
+      "nonWhitespaceCharacterCount": 519,
       "linkCount": 12,
-      "embedCount": 0,
+      "embedCount": 12,
       "createdDate": 1685115943688,
-      "modifiedDate": 1685140924593,
-      "sizeInBytes": 312
+      "modifiedDate": 1685195252135,
+      "sizeInBytes": 599
     },
     "Content/The implementation.md": {
       "isDirectory": false,
@@ -144,7 +144,7 @@
       "linkCount": 3,
       "embedCount": 0,
       "createdDate": 1685116225230,
-      "modifiedDate": 1685136497136,
+      "modifiedDate": 1685195080258,
       "sizeInBytes": 14184
     },
     "Content/Conclusions.md": {
@@ -176,15 +176,15 @@
     "Content/Applying the model at plan time.md": {
       "isDirectory": false,
       "noteCount": 1,
-      "wordCount": 883,
-      "pageCount": 2.9433333333333334,
-      "characterCount": 5294,
-      "nonWhitespaceCharacterCount": 4334,
-      "linkCount": 1,
+      "wordCount": 882,
+      "pageCount": 2.94,
+      "characterCount": 5282,
+      "nonWhitespaceCharacterCount": 4322,
+      "linkCount": 0,
       "embedCount": 0,
       "createdDate": 1685116411446,
-      "modifiedDate": 1685194993864,
-      "sizeInBytes": 5300
+      "modifiedDate": 1685195006022,
+      "sizeInBytes": 5288
     },
     "Bibliography/Safety Standards and Collaborative Robots.md": {
       "isDirectory": false,
