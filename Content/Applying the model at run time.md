@@ -14,7 +14,6 @@
 - Movement override when runtime risk is too high
 
 ## Interpreting the parameters
-
 The five risk factors from the proposed method are fairly easy to apply to run time implementations of the model. All it takes is some further interpretation of what each parameter means by defining ways to calculate it and ways to influence it to reduce risk.
 
 Just like we discussed earlier, the intrinsic risk value depends on the task that is being carried out at a given time and it does not depend on how it is being carried out. This means that we can derive this risk factor from our knowledge of the task at hand. Intrinsic risk values for each task could be precalculated in cases where we already know exactly which tasks the robot is going to accomplish. It is also possible to use the robot's dynamic, run time knowledge to assess the intrinsic risk of the current situation. This would be very useful for HRC scenarios where it is not possible to know the exact set of tasks that the robot is going to do beforehand. It would allow for very flexible and smart robots to exist and collaborate with humans.
@@ -26,10 +25,9 @@ Movement speed is very intuitively applied here, it might not be required to cal
 
 Impact probability is also intuitive. It represents the general distance between robot and human and the probability of them getting in each other's way. This can be evaluated using known data about what the allocated task for the human is, or it could be estimated based on the physical distance between the working areas of human and robot. This risk factor can be made safer by reallocating the human's task so that the working areas are not close together. It could also be reduced by asking the human to move away with light or sound signals (more on this later).
 
-Human uncertainty can be estimated using known data about the operator like experience level, age, movement range, etc. Even though the run time application of this model probably benefits far more from evaluating this factor using sensor data during run time because it equips the robot with the capability of responding to nuanced, real life situations. Run time human uncertainty can be calculated by detecting how quickly or how unpredictably the human has been moving in a recent time interval. If the human has been moving really quickly for the past minute then it's probably better to account for a higher human uncertainty value. If the human has been standin
+Human uncertainty can be estimated using known data about the operator like experience level, age, movement range, etc. Even though the run time application of this model probably benefits far more from evaluating this factor using sensor data during run time because it equips the robot with the capability of responding to nuanced, real life situations. Run time human uncertainty can be calculated by detecting how quickly or how unpredictably the human has been moving in a recent time interval. If the human has been moving really quickly for the past minute, then it's probably better to account for a higher human uncertainty value. A lower uncertainty value should be assigned when the operator has been standing still for five minutes.
 
 ## Qualities
+With the risk values above, a robot has sophisticated awareness of how risky a given situation is. It is not only aware of a flat general risk assessment value, but it also know what exactly is making the situation unsafe and it knows how to act in order to solve the issue. The robot has a broad range of actions that it can perform to avoid 
 
-
-
-
+An immediately apparent characteristic of this application is that it is heavily dependent on sensor data. This is what makes it so flexible and general, but it also means that it may be hard to implement. Sensor data is a tricky subject, accurate sensors are expensive and the state of the art is only just starting to come up with advanced situational awareness techniques based on sensor feeds.
