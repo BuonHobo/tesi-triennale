@@ -17,3 +17,11 @@
 - Other work that can be done
     - Robot-Human communication when plan time risk is too high
     - Guidelines or automated tools for compiling data could be worked on
+
+## Interpreting the parameters
+
+## Accounting for efficiency
+
+## Qualities
+
+
