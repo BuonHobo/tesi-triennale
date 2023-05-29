@@ -33,15 +33,15 @@
     "Content/The implementation.md": {
       "isDirectory": false,
       "noteCount": 1,
-      "wordCount": 267,
-      "pageCount": 0.89,
-      "characterCount": 1769,
-      "nonWhitespaceCharacterCount": 1279,
+      "wordCount": 324,
+      "pageCount": 1.08,
+      "characterCount": 2209,
+      "nonWhitespaceCharacterCount": 1640,
       "linkCount": 0,
       "embedCount": 0,
       "createdDate": 1685116453518,
-      "modifiedDate": 1685116456053,
-      "sizeInBytes": 1771
+      "modifiedDate": 1685378060441,
+      "sizeInBytes": 2211
     },
     "Content/The experiment.md": {
       "isDirectory": false,
@@ -178,13 +178,13 @@
       "noteCount": 1,
       "wordCount": 1517,
       "pageCount": 5.056666666666667,
-      "characterCount": 8912,
+      "characterCount": 8910,
       "nonWhitespaceCharacterCount": 7379,
       "linkCount": 0,
       "embedCount": 0,
       "createdDate": 1685116411446,
-      "modifiedDate": 1685375015603,
-      "sizeInBytes": 8912
+      "modifiedDate": 1685377651669,
+      "sizeInBytes": 8910
     },
     "Bibliography/Safety Standards and Collaborative Robots.md": {
       "isDirectory": false,
