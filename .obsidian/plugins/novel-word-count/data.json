@@ -17,18 +17,18 @@
     "pageCountType": "ByWords"
   },
   "cachedCounts": {
-    "conflict-files-obsidian-git.md": {
+    "Index.md": {
       "isDirectory": false,
       "noteCount": 1,
-      "wordCount": 92,
-      "pageCount": 0.30666666666666664,
-      "characterCount": 662,
-      "nonWhitespaceCharacterCount": 560,
-      "linkCount": 1,
-      "embedCount": 0,
-      "createdDate": 1685365459627,
-      "modifiedDate": 1685365459628,
-      "sizeInBytes": 662
+      "wordCount": 34,
+      "pageCount": 0.11333333333333333,
+      "characterCount": 285,
+      "nonWhitespaceCharacterCount": 252,
+      "linkCount": 0,
+      "embedCount": 12,
+      "createdDate": 1685115943688,
+      "modifiedDate": 1685195416958,
+      "sizeInBytes": 285
     },
     "Content/The implementation.md": {
       "isDirectory": false,
@@ -56,19 +56,6 @@
       "modifiedDate": 1685116515403,
       "sizeInBytes": 3062
     },
-    "Content/Future work.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 91,
-      "pageCount": 0.30333333333333334,
-      "characterCount": 512,
-      "nonWhitespaceCharacterCount": 418,
-      "linkCount": 0,
-      "embedCount": 0,
-      "createdDate": 1685116597584,
-      "modifiedDate": 1685193652911,
-      "sizeInBytes": 512
-    },
     "Content/Task Planning.md": {
       "isDirectory": false,
       "noteCount": 1,
@@ -81,19 +68,6 @@
       "createdDate": 1685116152223,
       "modifiedDate": 1685197647298,
       "sizeInBytes": 505
-    },
-    "Content/Introduction.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 0,
-      "pageCount": 0,
-      "characterCount": 0,
-      "nonWhitespaceCharacterCount": 0,
-      "linkCount": 0,
-      "embedCount": 0,
-      "createdDate": 1685116041234,
-      "modifiedDate": 1685116041234,
-      "sizeInBytes": 0
     },
     "Content/Support material.md": {
       "isDirectory": false,
@@ -108,19 +82,6 @@
       "modifiedDate": 1685116583743,
       "sizeInBytes": 113
     },
-    "Content/Defining a risk awareness model.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 2397,
-      "pageCount": 7.99,
-      "characterCount": 14184,
-      "nonWhitespaceCharacterCount": 11744,
-      "linkCount": 3,
-      "embedCount": 0,
-      "createdDate": 1685116225230,
-      "modifiedDate": 1685195080258,
-      "sizeInBytes": 14184
-    },
     "Content/Our risk awareness model.md": {
       "isDirectory": false,
       "noteCount": 1,
@@ -134,18 +95,18 @@
       "modifiedDate": 1685192814084,
       "sizeInBytes": 6972
     },
-    "Content/Applying the model at plan time.md": {
+    "Content/Introduction.md": {
       "isDirectory": false,
       "noteCount": 1,
-      "wordCount": 1298,
-      "pageCount": 4.326666666666667,
-      "characterCount": 7633,
-      "nonWhitespaceCharacterCount": 6251,
+      "wordCount": 0,
+      "pageCount": 0,
+      "characterCount": 0,
+      "nonWhitespaceCharacterCount": 0,
       "linkCount": 0,
       "embedCount": 0,
-      "createdDate": 1685116411446,
-      "modifiedDate": 1685198077485,
-      "sizeInBytes": 7639
+      "createdDate": 1685116041234,
+      "modifiedDate": 1685116041234,
+      "sizeInBytes": 0
     },
     "Content/HRC.md": {
       "isDirectory": false,
@@ -159,6 +120,32 @@
       "createdDate": 1685116128146,
       "modifiedDate": 1685116187204,
       "sizeInBytes": 633
+    },
+    "Content/Future work.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 91,
+      "pageCount": 0.30333333333333334,
+      "characterCount": 512,
+      "nonWhitespaceCharacterCount": 418,
+      "linkCount": 0,
+      "embedCount": 0,
+      "createdDate": 1685116597584,
+      "modifiedDate": 1685193652911,
+      "sizeInBytes": 512
+    },
+    "Content/Defining a risk awareness model.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 2397,
+      "pageCount": 7.99,
+      "characterCount": 14184,
+      "nonWhitespaceCharacterCount": 11744,
+      "linkCount": 3,
+      "embedCount": 0,
+      "createdDate": 1685116225230,
+      "modifiedDate": 1685195080258,
+      "sizeInBytes": 14184
     },
     "Content/Conclusions.md": {
       "isDirectory": false,
@@ -186,31 +173,18 @@
       "modifiedDate": 1685176716268,
       "sizeInBytes": 7860
     },
-    "Bibliography/ISO 10218-2.2011.md": {
+    "Content/Applying the model at plan time.md": {
       "isDirectory": false,
       "noteCount": 1,
-      "wordCount": 78,
-      "pageCount": 0.26,
-      "characterCount": 607,
-      "nonWhitespaceCharacterCount": 530,
+      "wordCount": 1298,
+      "pageCount": 4.326666666666667,
+      "characterCount": 7633,
+      "nonWhitespaceCharacterCount": 6251,
       "linkCount": 0,
       "embedCount": 0,
-      "createdDate": 1685119053025,
-      "modifiedDate": 1685119161025,
-      "sizeInBytes": 612
-    },
-    "Bibliography/ISO 10218-1.2011.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 74,
-      "pageCount": 0.24666666666666667,
-      "characterCount": 566,
-      "nonWhitespaceCharacterCount": 493,
-      "linkCount": 0,
-      "embedCount": 0,
-      "createdDate": 1685118980088,
-      "modifiedDate": 1685119224308,
-      "sizeInBytes": 571
+      "createdDate": 1685116411446,
+      "modifiedDate": 1685198077485,
+      "sizeInBytes": 7639
     },
     "Bibliography/Safety Standards and Collaborative Robots.md": {
       "isDirectory": false,
@@ -238,6 +212,32 @@
       "modifiedDate": 1685119259479,
       "sizeInBytes": 473
     },
+    "Bibliography/ISO 10218-2.2011.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 78,
+      "pageCount": 0.26,
+      "characterCount": 607,
+      "nonWhitespaceCharacterCount": 530,
+      "linkCount": 0,
+      "embedCount": 0,
+      "createdDate": 1685119053025,
+      "modifiedDate": 1685119161025,
+      "sizeInBytes": 612
+    },
+    "Bibliography/ISO 10218-1.2011.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 74,
+      "pageCount": 0.24666666666666667,
+      "characterCount": 566,
+      "nonWhitespaceCharacterCount": 493,
+      "linkCount": 0,
+      "embedCount": 0,
+      "createdDate": 1685118980088,
+      "modifiedDate": 1685119224308,
+      "sizeInBytes": 571
+    },
     "Bibliography/ANSI_RIA R15.06-2012.md": {
       "isDirectory": false,
       "noteCount": 1,
@@ -250,19 +250,6 @@
       "createdDate": 1685119260815,
       "modifiedDate": 1685119366542,
       "sizeInBytes": 342
-    },
-    "Index.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 34,
-      "pageCount": 0.11333333333333333,
-      "characterCount": 285,
-      "nonWhitespaceCharacterCount": 252,
-      "linkCount": 0,
-      "embedCount": 12,
-      "createdDate": 1685115943688,
-      "modifiedDate": 1685195416958,
-      "sizeInBytes": 285
     }
   }
 }
