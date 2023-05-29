@@ -1,4 +1,5 @@
 - Actual simulations of the plan could be run with ROS in order to show that avoiding collision is powerful
+- Other ideas sprinkled in the article
 - Work could be done to make the planner more reactive to the experience level of the human
 - Experiments could be tried with more than one human, maybe with different experience level
 - Experiments where the risk factors are weighted according the hierarchy of severity, exposure, and avoidance

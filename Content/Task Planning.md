@@ -7,6 +7,7 @@
     - Disadvantages
 - PLATINUm
     - Implementation of timeline is based planning
+    - Used at CNR
     - Comparing nodes in search strategy
     - Scalability
     - Flexibility
