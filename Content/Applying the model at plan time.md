@@ -46,8 +46,9 @@ The estimated makespan can be used in a Pareto optimization when comparing diffe
 The proposed application of the model during the planning phases is fairly easy to implement. The easiest approach is getting a set of data that was pre compiled with appropriate strategies. A good set of pre compiled data will positively impact the quality of the resulting schedules and it makes it very easy to assign risk and makespan values to each task in the partial plans.
 
 Obtaining pre compiled data is a great first step. Admittedly, it might not always be trivial to come up with an accurate and extensive set of data. Since the scale of the dataset may increase dramatically as the HRC scenario becomes more complex, and it could be hard to find sensible and appropriate values. 
+Work could be done to improve this step of the planning process. It would be very helpful in the future to have automated tools to compile the data, or better guidelines to help coming up with estimation strategies. Other fundamentally different solutions might involve dynamically calculating data according to sophisticated heuristics instead of relying on a static set of values.
 
-
+Knowing what the peak risks are in a schedule before executing the plan can be very helpful when trying to maximize safety for the human worker. Prior knowledge of unsafe task could allow the planner to schedule additional safety oriented tasks before carrying out the risky one.
 
 This approach is fairly easy to implement on PLATINUm, given its high flexibility. We will discuss the details of our implementation in the following chapters.
 
