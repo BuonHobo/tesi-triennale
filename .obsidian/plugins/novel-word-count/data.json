@@ -59,15 +59,15 @@
     "Content/Task Planning.md": {
       "isDirectory": false,
       "noteCount": 1,
-      "wordCount": 69,
-      "pageCount": 0.23,
-      "characterCount": 505,
-      "nonWhitespaceCharacterCount": 329,
+      "wordCount": 73,
+      "pageCount": 0.24333333333333335,
+      "characterCount": 523,
+      "nonWhitespaceCharacterCount": 339,
       "linkCount": 0,
       "embedCount": 0,
       "createdDate": 1685116152223,
-      "modifiedDate": 1685197647298,
-      "sizeInBytes": 505
+      "modifiedDate": 1685374216517,
+      "sizeInBytes": 523
     },
     "Content/Support material.md": {
       "isDirectory": false,
@@ -124,15 +124,15 @@
     "Content/Future work.md": {
       "isDirectory": false,
       "noteCount": 1,
-      "wordCount": 91,
-      "pageCount": 0.30333333333333334,
-      "characterCount": 512,
-      "nonWhitespaceCharacterCount": 418,
+      "wordCount": 98,
+      "pageCount": 0.32666666666666666,
+      "characterCount": 551,
+      "nonWhitespaceCharacterCount": 450,
       "linkCount": 0,
       "embedCount": 0,
       "createdDate": 1685116597584,
-      "modifiedDate": 1685193652911,
-      "sizeInBytes": 512
+      "modifiedDate": 1685374016929,
+      "sizeInBytes": 551
     },
     "Content/Defining a risk awareness model.md": {
       "isDirectory": false,
@@ -176,15 +176,15 @@
     "Content/Applying the model at plan time.md": {
       "isDirectory": false,
       "noteCount": 1,
-      "wordCount": 1298,
-      "pageCount": 4.326666666666667,
-      "characterCount": 7633,
-      "nonWhitespaceCharacterCount": 6251,
+      "wordCount": 1517,
+      "pageCount": 5.056666666666667,
+      "characterCount": 8912,
+      "nonWhitespaceCharacterCount": 7379,
       "linkCount": 0,
       "embedCount": 0,
       "createdDate": 1685116411446,
-      "modifiedDate": 1685198077485,
-      "sizeInBytes": 7639
+      "modifiedDate": 1685375015603,
+      "sizeInBytes": 8912
     },
     "Bibliography/Safety Standards and Collaborative Robots.md": {
       "isDirectory": false,
