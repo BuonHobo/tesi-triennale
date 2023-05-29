@@ -11,7 +11,6 @@
 - Advantages of this solution
     - It can be tightly integrated with PLATINUm’s planning process
     - It provides PLATINUm with a form of risk awareness that can be used along with metrics
-    - The robot can take the human’s experience level into account
 - Disadvantages
     - The plan-time version can require a lot of pre-compiled data about the tasks
 - Other work that can be done
@@ -44,6 +43,14 @@ The makespan of human tasks, on the other hand, can be estimated with data such 
 The estimated makespan can be used in a Pareto optimization when comparing different nodes during the plan time search for a feasible schedule. Different strategies can be used in the Pareto optimization, with widely varying degrees of complexity. We will show the one we used later on in the paper. As a rule of thumb, they all generally start by checking dominance conditions, which indicate when a plan is both safer and more efficient. If there is no clear superiority, then we can deploy all kinds of smart decision logic to find the final plan that better resembles what we want it to be. This represents one of the most critical components of a plan time implementation of this model. The Pareto logic in use can dramatically affect the schedules that the planner will come up with.
 
 ## Qualities
+The proposed application of the model during the planning phases is fairly easy to implement. The easiest approach is getting a set of data that was pre compiled with appropriate strategies. A good set of pre compiled data will positively impact the quality of the resulting schedules and it makes it very easy to assign risk and makespan values to each task in the partial plans.
+
+Obtaining pre compiled data is a great first step. Admittedly, it might not always be trivial to come up with an accurate and extensive set of data. Since the scale of the dataset may increase dramatically as the HRC scenario becomes more complex, and it could be hard to find sensible and appropriate values. 
+
+
+
+This approach is fairly easy to implement on PLATINUm, given its high flexibility. We will discuss the details of our implementation in the following chapters.
+
 
 
 ### Advantages
