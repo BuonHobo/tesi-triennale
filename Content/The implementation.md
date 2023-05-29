@@ -5,7 +5,7 @@
     - enqueue
     - compare
     - Domain specific object
-- The NodeRiskPlanner Class
+- The RiskAssessmentPlanner Class
     - Platinum’s flexibility allows to make a planner just by adding a class
 - The RiskAssessmentSearchStrategy Class
     - A strategy affects the way a planner gets to the solution
@@ -52,3 +52,39 @@
 - The python chart generator
     - Define a set of functions, each one makes a graph
     - Just upload the css file and it automatically generates graphs
+
+## Extending the Planner class
+### The Planner class
+
+
+### The RiskAssessmentPlanner class
+
+
+### Other planners
+
+
+## Extending the SearchStrategy class
+### The SearchStrategy class
+
+
+### The RiskAssessmentSearchStrategy Class
+
+
+### Other search strategies
+
+
+## Model implementation
+### Risk factors
+
+
+### The NodeRiskEvaluator Class
+
+
+## Utilities
+### Python DDL generator
+
+
+### The DataCollector Class
+
+
+### Python chart generator

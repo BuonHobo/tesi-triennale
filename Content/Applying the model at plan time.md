@@ -34,4 +34,3 @@ Other solutions might involve completely different kinds of safety oriented acti
 
 This model is suitable for use in multiobjective planning frameworks, thanks to the relatively simple amount of data that it is based on, and the handy risk assessment value that it outputs. The risk value can be used in conjunction with a wide variety of metrics, which may optimize for time efficiency, cost efficiency, ergonomics, etc.
 Since it is mainly based on data gathered from a static set, our proposed implementation is fairly easy to develop using PLATINUm. PLATINUm's flexibility allowed us to build a complex logic such as this on top of it with relatively few hassles. The implementation details will be explored in the following chapters.
-
