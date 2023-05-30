@@ -128,7 +128,7 @@ public enum GeometricRisk {
 }
 ```
 
-We parse the string we get from PLATINUm into a set of parameters represented by Enums. In order to do this we split the string on every occurrence of the `-` character and then instantiate the Enum class using the static `valueOf(str)` method. Here's an example:
+We parse the string we get from PLATINUm into a set of parameters represented by Enums. In order to do this, we split the string on every occurrence of the `-` character and then instantiate the Enum class using the static `valueOf(str)` method. Here's an example:
 
 After every parameter has been parsed into the appropriate class, they are all stored inside a class that represents the whole task. Here's an example of the system:
 
@@ -143,7 +143,7 @@ public RobotTaskRisk(String tokenValue, ...) {
 }
 ```
 
-In our example, the `chest` parameter gets parsed into `GeometricRisk.chest` and we now have access to the risk value associated to this parameter. The same is done with the other parameters and everything is stored inside the `RobotTaskRisk` class.
+In our example, the `chest` parameter gets parsed into `GeometricRisk.chest` and we now have access to the risk value associated to this parameter. The same is done with the other parameters, and everything is stored inside the `RobotTaskRisk` class.
 
 This makes it very easy to parse a simple string into structured and useful data that we can use to compute risk and makespan related properties.
 
