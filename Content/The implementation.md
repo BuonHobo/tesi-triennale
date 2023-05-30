@@ -23,10 +23,17 @@
     - PLATINUm's representation of tasks
     - FromString constructor
     - Easy interface with platinum
+    - makespan
+    - show every enum in detail
+    - show humantaskrisk
+    - show robottaskrisk
+    - idle
 - The NodeRiskEvaluator Class
     - Can be used by any planning strategy
     - Parses the whole plan into sequences of risk aware tasks
     - The risk factor of each robot task uses the weighted average of the parallel human tasks
+    - implementation details
+    - how every parameter is calculated
     - RiskAssessmentSearchStrategy's compare function
     - All the data it produces:
         - average risk
@@ -112,16 +119,39 @@ Each of the relevant parameters of a task exists inside our implementation as a 
 
 ```java
 public enum GeometricRisk {  
-	legs(  riskValue: 0.2, distance: 4 ),  
-	chest( riskValue: 0.4, distance: 3 ),  
-	head(  riskValue: 0.7, distance: 2 ),  
-	none(  riskValue:   0, distance: 1 );
+	legs(  riskValue: 0.2, ...),  
+	chest( riskValue: 0.4, ...),  
+	head(  riskValue: 0.7, ...),  
+	none(  riskValue:   0, ...);
 	
 	//...
 }
 ```
 
-We parse the string we get from PLATINUm into a set of parameters represented by Enums. In order to do this we split the string on every occurrence of the `-` character and then instantiate the Enum class using the 
+We parse the string we get from PLATINUm into a set of parameters represented by Enums. In order to do this we split the string on every occurrence of the `-` character and then instantiate the Enum class using the static `valueOf(str)` method. Here's an example:
+
+After every parameter has been parsed into the appropriate class, they are all stored inside a class that represents the whole task. Here's an example of the system:
+
+```java
+public RobotTaskRisk(String tokenValue, ...) {  
+	//...
+	// tokenValue: "PickPlace-foam-low-chest-regular"
+	String[] splits = tokenValue.split("-"); 
+	//...
+	this.geometricRisk = GeometricRisk.valueOf(splits[3]);
+	//...
+}
+```
+
+In our example, the `chest` parameter gets parsed into `GeometricRisk.chest` and we now have access to the risk value associated to this parameter. The same is done with the other parameters and everything is stored inside the `RobotTaskRisk` class.
+
+This makes it very easy to parse a simple string into structured and useful data that we can use to compute risk and makespan related properties.
+
+%%Talk about makespan%%
+%%Now talk about all the enums and explain each data that they have%%
+%%Now say that there is a different class to represent human tasks%%
+%%Show differences%%
+%%Talk about the idle task%%
 
 ### The NodeRiskEvaluator Class
 
