@@ -26,8 +26,8 @@
       "nonWhitespaceCharacterCount": 252,
       "linkCount": 0,
       "embedCount": 12,
-      "createdDate": 1685115943688,
-      "modifiedDate": 1685195416958,
+      "createdDate": 1685342188093,
+      "modifiedDate": 1685342188093,
       "sizeInBytes": 285
     },
     "Content/The implementation.md": {
@@ -39,8 +39,8 @@
       "nonWhitespaceCharacterCount": 1640,
       "linkCount": 0,
       "embedCount": 0,
-      "createdDate": 1685116453518,
-      "modifiedDate": 1685378060441,
+      "createdDate": 1685419673351,
+      "modifiedDate": 1685419673351,
       "sizeInBytes": 2211
     },
     "Content/The experiment.md": {
@@ -52,8 +52,8 @@
       "nonWhitespaceCharacterCount": 2109,
       "linkCount": 0,
       "embedCount": 0,
-      "createdDate": 1685116509525,
-      "modifiedDate": 1685116515403,
+      "createdDate": 1685342188093,
+      "modifiedDate": 1685342188093,
       "sizeInBytes": 3062
     },
     "Content/Task Planning.md": {
@@ -65,8 +65,8 @@
       "nonWhitespaceCharacterCount": 339,
       "linkCount": 0,
       "embedCount": 0,
-      "createdDate": 1685116152223,
-      "modifiedDate": 1685374216517,
+      "createdDate": 1685419673351,
+      "modifiedDate": 1685419673351,
       "sizeInBytes": 523
     },
     "Content/Support material.md": {
@@ -78,8 +78,8 @@
       "nonWhitespaceCharacterCount": 88,
       "linkCount": 0,
       "embedCount": 0,
-      "createdDate": 1685116582235,
-      "modifiedDate": 1685116583743,
+      "createdDate": 1685342188093,
+      "modifiedDate": 1685342188093,
       "sizeInBytes": 113
     },
     "Content/Our risk awareness model.md": {
@@ -91,8 +91,8 @@
       "nonWhitespaceCharacterCount": 5764,
       "linkCount": 0,
       "embedCount": 0,
-      "createdDate": 1685116299536,
-      "modifiedDate": 1685192814084,
+      "createdDate": 1685342188092,
+      "modifiedDate": 1685342188093,
       "sizeInBytes": 6972
     },
     "Content/Introduction.md": {
@@ -104,8 +104,8 @@
       "nonWhitespaceCharacterCount": 0,
       "linkCount": 0,
       "embedCount": 0,
-      "createdDate": 1685116041234,
-      "modifiedDate": 1685116041234,
+      "createdDate": 1685342188092,
+      "modifiedDate": 1685342188092,
       "sizeInBytes": 0
     },
     "Content/HRC.md": {
@@ -117,8 +117,8 @@
       "nonWhitespaceCharacterCount": 479,
       "linkCount": 0,
       "embedCount": 0,
-      "createdDate": 1685116128146,
-      "modifiedDate": 1685116187204,
+      "createdDate": 1685342188092,
+      "modifiedDate": 1685342188092,
       "sizeInBytes": 633
     },
     "Content/Future work.md": {
@@ -130,8 +130,8 @@
       "nonWhitespaceCharacterCount": 450,
       "linkCount": 0,
       "embedCount": 0,
-      "createdDate": 1685116597584,
-      "modifiedDate": 1685374016929,
+      "createdDate": 1685419673351,
+      "modifiedDate": 1685419673351,
       "sizeInBytes": 551
     },
     "Content/Defining a risk awareness model.md": {
@@ -143,8 +143,8 @@
       "nonWhitespaceCharacterCount": 11744,
       "linkCount": 3,
       "embedCount": 0,
-      "createdDate": 1685116225230,
-      "modifiedDate": 1685195080258,
+      "createdDate": 1685342188092,
+      "modifiedDate": 1685342188092,
       "sizeInBytes": 14184
     },
     "Content/Conclusions.md": {
@@ -156,8 +156,8 @@
       "nonWhitespaceCharacterCount": 0,
       "linkCount": 0,
       "embedCount": 0,
-      "createdDate": 1685116657034,
-      "modifiedDate": 1685116657034,
+      "createdDate": 1685342188092,
+      "modifiedDate": 1685342188092,
       "sizeInBytes": 0
     },
     "Content/Applying the model at run time.md": {
@@ -169,8 +169,8 @@
       "nonWhitespaceCharacterCount": 6465,
       "linkCount": 0,
       "embedCount": 0,
-      "createdDate": 1685116372884,
-      "modifiedDate": 1685176716268,
+      "createdDate": 1685342188092,
+      "modifiedDate": 1685342188092,
       "sizeInBytes": 7860
     },
     "Content/Applying the model at plan time.md": {
@@ -182,8 +182,8 @@
       "nonWhitespaceCharacterCount": 7379,
       "linkCount": 0,
       "embedCount": 0,
-      "createdDate": 1685116411446,
-      "modifiedDate": 1685377651669,
+      "createdDate": 1685419673351,
+      "modifiedDate": 1685419673351,
       "sizeInBytes": 8910
     },
     "Bibliography/Safety Standards and Collaborative Robots.md": {
@@ -195,8 +195,8 @@
       "nonWhitespaceCharacterCount": 548,
       "linkCount": 0,
       "embedCount": 0,
-      "createdDate": 1685118317418,
-      "modifiedDate": 1685118512042,
+      "createdDate": 1685342188092,
+      "modifiedDate": 1685342188092,
       "sizeInBytes": 587
     },
     "Bibliography/ISO TS 15066.2016.md": {
@@ -208,22 +208,9 @@
       "nonWhitespaceCharacterCount": 412,
       "linkCount": 0,
       "embedCount": 0,
-      "createdDate": 1685119178527,
-      "modifiedDate": 1685119259479,
+      "createdDate": 1685342188092,
+      "modifiedDate": 1685342188092,
       "sizeInBytes": 473
-    },
-    "Bibliography/ISO 10218-2.2011.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 78,
-      "pageCount": 0.26,
-      "characterCount": 607,
-      "nonWhitespaceCharacterCount": 530,
-      "linkCount": 0,
-      "embedCount": 0,
-      "createdDate": 1685119053025,
-      "modifiedDate": 1685119161025,
-      "sizeInBytes": 612
     },
     "Bibliography/ISO 10218-1.2011.md": {
       "isDirectory": false,
@@ -234,9 +221,22 @@
       "nonWhitespaceCharacterCount": 493,
       "linkCount": 0,
       "embedCount": 0,
-      "createdDate": 1685118980088,
-      "modifiedDate": 1685119224308,
+      "createdDate": 1685342188092,
+      "modifiedDate": 1685342188092,
       "sizeInBytes": 571
+    },
+    "Bibliography/ISO 10218-2.2011.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 78,
+      "pageCount": 0.26,
+      "characterCount": 607,
+      "nonWhitespaceCharacterCount": 530,
+      "linkCount": 0,
+      "embedCount": 0,
+      "createdDate": 1685342188092,
+      "modifiedDate": 1685342188092,
+      "sizeInBytes": 612
     },
     "Bibliography/ANSI_RIA R15.06-2012.md": {
       "isDirectory": false,
@@ -247,8 +247,8 @@
       "nonWhitespaceCharacterCount": 294,
       "linkCount": 0,
       "embedCount": 0,
-      "createdDate": 1685119260815,
-      "modifiedDate": 1685119366542,
+      "createdDate": 1685342188092,
+      "modifiedDate": 1685342188092,
       "sizeInBytes": 342
     }
   }
