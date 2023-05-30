@@ -20,6 +20,7 @@
     - already implemented
     - depth first
 - Risk parameters as Java Enums
+    - PLATINUm's representation of tasks
     - FromString constructor
     - Easy interface with platinum
 - The NodeRiskEvaluator Class
@@ -100,7 +101,7 @@ We also compared our strategy against the PlannerSearchStrategy, which is provid
 
 ## Model implementation
 ### Risk factors
-
+In order to evaluate the risk factors of a task, and subsequently of a whole plan, we need to know which tasks PLATINUm is proposing for the current partial plan. Each `SearchSpaceNode` has a reference to a `Plan` class, which in turn has a collection of timelines. Each component in the 
 
 ### The NodeRiskEvaluator Class
 
