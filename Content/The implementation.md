@@ -101,7 +101,27 @@ We also compared our strategy against the PlannerSearchStrategy, which is provid
 
 ## Model implementation
 ### Risk factors
-In order to evaluate the risk factors of a task, and subsequently of a whole plan, we need to know which tasks PLATINUm is proposing for the current partial plan. Each `SearchSpaceNode` has a reference to a `Plan` class, which in turn has a collection of timelines. Each component in the 
+In order to evaluate the risk factors of a task, and subsequently of a whole plan, we need to know which tasks PLATINUm is proposing for the current partial plan. Each `SearchSpaceNode` has a reference to a `Plan` class, which in turn has a `Map<DomainComponent, List<DecisionVariable>>`. Each component in the problem domain has its own timeline and we care about the timelines for the Human and Robot components.
+
+A timeline is represented with a `List<DecisionVariable>`, in the case of the Human and Robot components, each `DecisionVariable` represents a task. We can finally know what the task is by calling `task.getValue()` and parsing the string that this method returns.
+
+As an example, let's say that the task we're currently parsing has the following (String) value: `PickPlace-foam-low-chest-regular`. This means that the task is a Pick & Place operation, which is the most common in HRC environments. The following set of values specifies the parameters of this task, which respectively indicate `target`, `intrinsic risk`, `trajectory`, and `speed` of the Pick & Place. 
+
+We will elaborate on these parameters later, what matters is how our implementation parses this value into structured and useful data.
+Each of the relevant parameters of a task exists inside our implementation as a Java Enum class, which contain the static pre-compiled values that are associated to each value of the parameter. 
+
+```java
+public enum GeometricRisk {  
+	legs(  riskValue: 0.2, distance: 4 ),  
+	chest( riskValue: 0.4, distance: 3 ),  
+	head(  riskValue: 0.7, distance: 2 ),  
+	none(  riskValue:   0, distance: 1 );
+	
+	//...
+}
+```
+
+We parse the string we get from PLATINUm into a set of parameters represented by Enums. In order to do this we split the string on every occurrence of the `-` character and then instantiate the Enum class using the 
 
 ### The NodeRiskEvaluator Class
 
