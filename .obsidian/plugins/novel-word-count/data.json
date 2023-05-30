@@ -212,19 +212,6 @@
       "modifiedDate": 1685342188092,
       "sizeInBytes": 473
     },
-    "Bibliography/ISO 10218-1.2011.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 74,
-      "pageCount": 0.24666666666666667,
-      "characterCount": 566,
-      "nonWhitespaceCharacterCount": 493,
-      "linkCount": 0,
-      "embedCount": 0,
-      "createdDate": 1685342188092,
-      "modifiedDate": 1685342188092,
-      "sizeInBytes": 571
-    },
     "Bibliography/ISO 10218-2.2011.md": {
       "isDirectory": false,
       "noteCount": 1,
@@ -237,6 +224,19 @@
       "createdDate": 1685342188092,
       "modifiedDate": 1685342188092,
       "sizeInBytes": 612
+    },
+    "Bibliography/ISO 10218-1.2011.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 74,
+      "pageCount": 0.24666666666666667,
+      "characterCount": 566,
+      "nonWhitespaceCharacterCount": 493,
+      "linkCount": 0,
+      "embedCount": 0,
+      "createdDate": 1685342188092,
+      "modifiedDate": 1685342188092,
+      "sizeInBytes": 571
     },
     "Bibliography/ANSI_RIA R15.06-2012.md": {
       "isDirectory": false,
