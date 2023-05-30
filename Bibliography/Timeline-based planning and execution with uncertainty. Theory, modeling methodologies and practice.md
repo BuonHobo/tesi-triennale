@@ -1,0 +1,2 @@
+- Author: Alessandro Umbrico
+- Title: Timeline-based planning and execution with uncertainty: Theory, modeling methodologies and practice

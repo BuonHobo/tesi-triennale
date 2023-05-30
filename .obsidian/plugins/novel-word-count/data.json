@@ -33,15 +33,15 @@
     "Content/The implementation.md": {
       "isDirectory": false,
       "noteCount": 1,
-      "wordCount": 324,
-      "pageCount": 1.08,
-      "characterCount": 2209,
-      "nonWhitespaceCharacterCount": 1640,
+      "wordCount": 315,
+      "pageCount": 1.05,
+      "characterCount": 2112,
+      "nonWhitespaceCharacterCount": 1556,
       "linkCount": 0,
       "embedCount": 0,
       "createdDate": 1685116453518,
-      "modifiedDate": 1685378060441,
-      "sizeInBytes": 2211
+      "modifiedDate": 1685463144259,
+      "sizeInBytes": 2114
     },
     "Content/Introduction.md": {
       "isDirectory": false,
@@ -137,15 +137,15 @@
     "Content/Future work.md": {
       "isDirectory": false,
       "noteCount": 1,
-      "wordCount": 98,
-      "pageCount": 0.32666666666666666,
-      "characterCount": 551,
-      "nonWhitespaceCharacterCount": 450,
+      "wordCount": 112,
+      "pageCount": 0.37333333333333335,
+      "characterCount": 655,
+      "nonWhitespaceCharacterCount": 540,
       "linkCount": 0,
       "embedCount": 0,
       "createdDate": 1685116597584,
-      "modifiedDate": 1685374016929,
-      "sizeInBytes": 551
+      "modifiedDate": 1685462075885,
+      "sizeInBytes": 655
     },
     "Content/Defining a risk awareness model.md": {
       "isDirectory": false,
@@ -185,6 +185,19 @@
       "createdDate": 1685116411446,
       "modifiedDate": 1685377651669,
       "sizeInBytes": 8910
+    },
+    "Bibliography/Timeline-based planning and execution with uncertainty. Theory, modeling methodologies and practice.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 17,
+      "pageCount": 0.056666666666666664,
+      "characterCount": 137,
+      "nonWhitespaceCharacterCount": 121,
+      "linkCount": 0,
+      "embedCount": 0,
+      "createdDate": 1685463299291,
+      "modifiedDate": 1685463437138,
+      "sizeInBytes": 137
     },
     "Bibliography/Safety Standards and Collaborative Robots.md": {
       "isDirectory": false,
