@@ -12,9 +12,3 @@
     - Scalability
     - Flexibility
     - Java
-        - DDL and PDL
-            - Domain components
-            - Constraints
-            - Transition between state values
-            - parameters
-            - goal component
