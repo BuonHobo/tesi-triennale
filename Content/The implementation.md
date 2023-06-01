@@ -155,13 +155,14 @@ The `GeometricRisk` class, which was partially shown earlier, stores both the nu
 
 The `Speed` class stores, for each of the allowed speed levels, both the absolute speed value and the risk value that is associated to it.
 
-The `Target` class knows what the target of this task is, and it stores the risk values associated with each varying degree of collision risk. This class also know how much time the human is expected to take in order to complete the task.
+The `Target` class knows what the target of this task is, and it stores the risk values associated with each varying degree of collision risk. This class also knows how much time the human is expected to take in order to complete the task.
 
-
+Finally, the `Expertise` class know what risk value is associated to each different experience level of the operator. Each experience level also has a time multiplier, based on the assumption that a more skilled human will take less time to carry out the same task.
 
 %%Talk about makespan%%
 %%Now talk about all the enums and explain each data that they have%%
 %%Now say that there is a different class to represent human tasks%%
+%%Say how risk and makespan are calculated%%
 %%Show differences%%
 %%Talk about the idle task%%
 
