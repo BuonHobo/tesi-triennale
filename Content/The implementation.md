@@ -172,7 +172,16 @@ Although risk only matters when both human and robot are working, we still had t
 Calculating makespan and risk this way worked well for our implementation, but more sophisticated strategies could be used.
 
 ### The NodeRiskEvaluator Class
+After defining the classes needed to parse and represent a single task, we now need a component with the responsibility of computing all the relevant risk and makespan related data on the scale of a plan. As stated earlier, PLATINUm gives our search strategy a partial plan and allows us to label it with data that we can later use to compare different plans.
 
+We will now discuss the implementation of the component charged with receiving a plan (or partial plan), calculating useful metrics and assign this data to the search space node. 
+This class is called `NodeRiskEvaluator`.
+
+It makes sense to have all the logic regarding the evaluation of a plan inside its own class, so that it can be used in different ways by multiple components of our implementation. This means that we're able to evaluate the safety and efficiency of a plan even when working with strategies that are not aware of our risk model, or that use it in conjunction with other metrics and techniques.
+
+After receiving a search space node, the `RiskAssessmentSearchStrategy` passes it to the `NodeRiskEvaluator`. The evaluator gets the timelines of the robot and human components in the plan, and then parses the timelines from `List<DecisionVariable>` to `List<HumanTaskRisk>` and `List<RobotTaskRisk>`. 
+
+During the parsing of the timelines, the evaluator starts from 
 
 ## Utilities
 ### Python DDL generator
