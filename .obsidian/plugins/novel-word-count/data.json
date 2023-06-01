@@ -17,6 +17,19 @@
     "pageCountType": "ByWords"
   },
   "cachedCounts": {
+    "conflict-files-obsidian-git.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 92,
+      "pageCount": 0.30666666666666664,
+      "characterCount": 662,
+      "nonWhitespaceCharacterCount": 560,
+      "linkCount": 1,
+      "embedCount": 0,
+      "createdDate": 1685605654560,
+      "modifiedDate": 1685605654563,
+      "sizeInBytes": 662
+    },
     "Index.md": {
       "isDirectory": false,
       "noteCount": 1,
@@ -48,13 +61,13 @@
       "noteCount": 1,
       "wordCount": 1809,
       "pageCount": 6.03,
-      "characterCount": 11975,
-      "nonWhitespaceCharacterCount": 9815,
+      "characterCount": 12143,
+      "nonWhitespaceCharacterCount": 9817,
       "linkCount": 1,
       "embedCount": 0,
       "createdDate": 1685116453518,
-      "modifiedDate": 1685479544773,
-      "sizeInBytes": 11977
+      "modifiedDate": 1685605654420,
+      "sizeInBytes": 12145
     },
     "Content/The experiment.md": {
       "isDirectory": false,
