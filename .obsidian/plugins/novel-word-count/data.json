@@ -30,19 +30,6 @@
       "modifiedDate": 1685195416958,
       "sizeInBytes": 285
     },
-    "Content/The implementation.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 315,
-      "pageCount": 1.05,
-      "characterCount": 2112,
-      "nonWhitespaceCharacterCount": 1556,
-      "linkCount": 0,
-      "embedCount": 0,
-      "createdDate": 1685116453518,
-      "modifiedDate": 1685463144259,
-      "sizeInBytes": 2114
-    },
     "Content/Introduction.md": {
       "isDirectory": false,
       "noteCount": 1,
@@ -55,6 +42,19 @@
       "createdDate": 1685116041234,
       "modifiedDate": 1685116041234,
       "sizeInBytes": 0
+    },
+    "Content/The implementation.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 1809,
+      "pageCount": 6.03,
+      "characterCount": 11975,
+      "nonWhitespaceCharacterCount": 9815,
+      "linkCount": 1,
+      "embedCount": 0,
+      "createdDate": 1685116453518,
+      "modifiedDate": 1685479544773,
+      "sizeInBytes": 11977
     },
     "Content/The experiment.md": {
       "isDirectory": false,
@@ -72,15 +72,15 @@
     "Content/Task Planning.md": {
       "isDirectory": false,
       "noteCount": 1,
-      "wordCount": 73,
-      "pageCount": 0.24333333333333335,
-      "characterCount": 523,
-      "nonWhitespaceCharacterCount": 339,
+      "wordCount": 54,
+      "pageCount": 0.18,
+      "characterCount": 343,
+      "nonWhitespaceCharacterCount": 246,
       "linkCount": 0,
       "embedCount": 0,
       "createdDate": 1685116152223,
-      "modifiedDate": 1685374216517,
-      "sizeInBytes": 523
+      "modifiedDate": 1685464423106,
+      "sizeInBytes": 343
     },
     "Content/Support material.md": {
       "isDirectory": false,
@@ -108,19 +108,6 @@
       "modifiedDate": 1685192814084,
       "sizeInBytes": 6972
     },
-    "Content/Conclusions.md": {
-      "isDirectory": false,
-      "noteCount": 1,
-      "wordCount": 0,
-      "pageCount": 0,
-      "characterCount": 0,
-      "nonWhitespaceCharacterCount": 0,
-      "linkCount": 0,
-      "embedCount": 0,
-      "createdDate": 1685116657034,
-      "modifiedDate": 1685116657034,
-      "sizeInBytes": 0
-    },
     "Content/HRC.md": {
       "isDirectory": false,
       "noteCount": 1,
@@ -146,6 +133,19 @@
       "createdDate": 1685116597584,
       "modifiedDate": 1685462075885,
       "sizeInBytes": 655
+    },
+    "Content/Conclusions.md": {
+      "isDirectory": false,
+      "noteCount": 1,
+      "wordCount": 0,
+      "pageCount": 0,
+      "characterCount": 0,
+      "nonWhitespaceCharacterCount": 0,
+      "linkCount": 0,
+      "embedCount": 0,
+      "createdDate": 1685116657034,
+      "modifiedDate": 1685116657034,
+      "sizeInBytes": 0
     },
     "Content/Defining a risk awareness model.md": {
       "isDirectory": false,
