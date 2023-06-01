@@ -221,7 +221,9 @@ All of the components involved in finding plans with good tradeoffs between risk
 ### Python DDL generator
 PLATINUm requires the problem domain to be described in a separate `.ddl` text file, which has its own syntax. This file specifies the components involved in the plan, the values that their state variables can assume, the transition rules and constraints between different state variables, the kind parameters that are accepted for each task, etc.
 
-For the first few test runs, it was enough to write this file manually. However, as the plans start getting more complex, wr
+For the first few test runs, it was enough to write this file manually. However, as the plans start getting more complex, writing the `.ddl` file manually becomes repetitive, tedious and extremely time consuming. 
+
+It seemed necessary for us to write an automated tool 
 
 ### The DataCollector Class
 
