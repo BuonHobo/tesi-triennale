@@ -159,6 +159,21 @@ The `Target` class knows what the target of this task is, and it stores the risk
 
 Finally, the `Expertise` class know what risk value is associated to each different experience level of the operator. Each experience level also has a time multiplier, based on the assumption that a more skilled human will take less time to carry out the same task.
 
+Human tasks and robot tasks are not equal, since `IntrinsicRisk`, `GeometricRisk`, and `Speed` do not apply to a task that is being carried out by a human. Similarly, `Expertise` does not apply to robots.
+
+This was solved by having two separate classes: `HumanTaskRisk` and `RobotTaskRisk` which both implement the `TaskRisk` interface, so that they both have methods such as `getMakespan()` and others.
+
+For a human task, makespan is obtained by multiplying the expected completion time stored in `Target` with the `Expertise` related time multiplier.
+
+For a robot task, on the other hand, makespan is obtained using the distance and speed values mentioned earlier.
+
+The risk value is computed by `RobotTaskRisk` with the `getRiskValueWithHumanTask(HumanTaskRisk humanTask)` function. This method also needs to know the human task that is being carried out in parallel, in order to estimate the collision probability and to know how experien
+
+
+Calculating makespan and risk this way worked well for our implementation, but more sophisticated strategies could be used.
+
+
+%%Use of heuristic risk or makespan calculations%%
 %%Talk about makespan%%
 %%Now talk about all the enums and explain each data that they have%%
 %%Now say that there is a different class to represent human tasks%%
