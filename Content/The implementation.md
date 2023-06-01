@@ -32,6 +32,7 @@
     - Can be used by any planning strategy
     - Parses the whole plan into sequences of risk aware tasks
     - The risk factor of each robot task uses the weighted average of the parallel human tasks
+    - NodeData class
     - implementation details
     - how every parameter is calculated
     - RiskAssessmentSearchStrategy's compare function
@@ -182,7 +183,6 @@ It makes sense to have all the logic regarding the evaluation of a plan inside i
 After receiving a search space node, the `RiskAssessmentSearchStrategy` passes it to the `NodeRiskEvaluator`. The evaluator gets the timelines of the robot and human components in the plan, and then parses the timelines from `List<DecisionVariable>` to `List<HumanTaskRisk>` and `List<RobotTaskRisk>`. 
 
 During the parsing of the timelines, the evaluator starts from $t=0$ and it progressively adds up the makespan data of each task in order to initialize tasks with the correct start time. This allows the evaluator to avoid losing information regarding concurrent tasks from different timelines.
-
 After this step, the `NodeRiskEvaluator` can finally start computing useful metrics, which we will explain below:
 
 `average risk` is the average risk value of a robot task in the evaluated plan.
@@ -199,11 +199,29 @@ When all task risk values are evaluated, the average is returned.
 
 `best robot makespan` is the time it takes the robot to complete all of its tasks.
 
-`estimated robot makespan` is a version of the robot makespan where possibly colliding tasks are penalized with a time multiplier. This could be used in some search strategies to increase the impact that collisions have on th
+`estimated robot makespan` is a version of the robot makespan where possibly colliding tasks are penalized with a time multiplier. This could be used in some search strategies to better represent the impact that collisions may have on the plan execution time.
+
+`robot tasks` is an array which stores, for each task type, how many tasks of that kind were allocated to the robot.
+
+`human tasks` is an array which stores, for each task type, how many tasks of that kind were allocated to the human.
+
+After computing this data, the evaluator stores it in a `NodeData` object, which will be assigned to the `SearchSpaceNode` as its `DomainSpecificMetric` attribute so that it can be referenced later by our `RiskAssessmentSearchStrategy`'s `compare` function.
+
+After defining every component, we can now discuss what logic `RiskAssessmentSearchStrategy` uses in its `compare` method to optimize for both makespan and safety.
+First, the two nodes' heuristic cost, as evaluated by PLATINUm, is compared in order to distinguish nodes with different levels of refinement.
+Then, the dominance condition is checked to see if one of the nodes has both a lower `average risk` and a lower `best makespan`. If so, the dominant node is selected.
+If no node is dominant, then the `max risk` attribute is used to filter out plans with unreasonable risk spikes. 
+After that, the strategy chooses the plan with less possible collisions.
+If both plans have the same amount of collisions, then the one with the lowest `best makespan` is selected.
+If no node has been chosen yet, then the final decision is based on which one has the lowest `average risk`.
+
+All of the components involved in finding plans with good tradeoffs between risk and efficiency have been defined. Their effectiveness will be showcased with the help of an experiment, later on in the paper.
 
 ## Utilities
 ### Python DDL generator
+PLATINUm requires the problem domain to be described in a separate `.ddl` text file, which has its own syntax. This file specifies the components involved in the plan, the values that their state variables can assume, the transition rules and constraints between different state variables, the kind parameters that are accepted for each task, etc.
 
+For the first few test runs, it was enough to write this file manually. However, as the plans start getting more complex, wr
 
 ### The DataCollector Class
 
