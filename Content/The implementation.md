@@ -122,7 +122,6 @@ public enum GeometricRisk {
 	legs(  riskValue: 0.2, ...),  
 	chest( riskValue: 0.4, ...),  
 	head(  riskValue: 0.7, ...),  
-	none(  riskValue:   0, ...);
 	
 	//...
 }
@@ -146,6 +145,19 @@ public RobotTaskRisk(String tokenValue, ...) {
 In our example, the `chest` parameter gets parsed into `GeometricRisk.chest` and we now have access to the risk value associated to this parameter. The same is done with the other parameters, and everything is stored inside the `RobotTaskRisk` class.
 
 This makes it very easy to parse a simple string into structured and useful data that we can use to compute risk and makespan related properties.
+
+As for the time related properties, they are stored in the class that represents the task (`RobotTaskRisk` in this case). Each task knows its start time (which is passed as a parameter to the constructor) and its makespan.
+The makespan is calculated using other properties that are stored inside the parameter Enums. We will now talk about those in detail:
+
+The `IntrinsicRisk` class only stores the numeric risk value that corresponds to each parameter.
+
+The `GeometricRisk` class, which was partially shown earlier, stores both the numeric risk value corresponding to a specific trajectory and the distance that the robot has to travel in order to follow the whole trajectory.
+
+The `Speed` class stores, for each of the allowed speed levels, both the absolute speed value and the risk value that is associated to it.
+
+The `Target` class knows what the target of this task is, and it stores the risk values associated with each varying degree of collision risk. This class also know how much time the human is expected to take in order to complete the task.
+
+
 
 %%Talk about makespan%%
 %%Now talk about all the enums and explain each data that they have%%
