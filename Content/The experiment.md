@@ -40,6 +40,7 @@
                 - A lot of metal because the human is slower at moving metal
             - Planner blindly assigns almost everything to the robot
                 - defeats the purpose
+                - a robot working alone is not a threat
             - RiskAssessment avoids assigning too many woods and metals to the robot, while foam is safer
             - Risk tries to avoid metal and wood
         - The data allows us to do more, we can see collisions

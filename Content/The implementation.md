@@ -143,7 +143,6 @@ public RobotTaskRisk(String tokenValue, ...) {
 ```
 
 In our example, the `chest` parameter gets parsed into `GeometricRisk.chest` and we now have access to the risk value associated to this parameter. The same is done with the other parameters, and everything is stored inside the `RobotTaskRisk` class.
-
 This makes it very easy to parse a simple string into structured and useful data that we can use to compute risk and makespan related properties.
 
 As for the time related properties, they are stored in the class that represents the task (`RobotTaskRisk` in this case). Each task knows its start time (which is passed as a parameter to the constructor) and its makespan.
@@ -160,26 +159,17 @@ The `Target` class knows what the target of this task is, and it stores the risk
 Finally, the `Expertise` class know what risk value is associated to each different experience level of the operator. Each experience level also has a time multiplier, based on the assumption that a more skilled human will take less time to carry out the same task.
 
 Human tasks and robot tasks are not equal, since `IntrinsicRisk`, `GeometricRisk`, and `Speed` do not apply to a task that is being carried out by a human. Similarly, `Expertise` does not apply to robots.
-
 This was solved by having two separate classes: `HumanTaskRisk` and `RobotTaskRisk` which both implement the `TaskRisk` interface, so that they both have methods such as `getMakespan()` and others.
 
 For a human task, makespan is obtained by multiplying the expected completion time stored in `Target` with the `Expertise` related time multiplier.
-
 For a robot task, on the other hand, makespan is obtained using the distance and speed values mentioned earlier.
 
-The risk value is computed by `RobotTaskRisk` with the `getRiskValueWithHumanTask(HumanTaskRisk humanTask)` function. This method also needs to know the human task that is being carried out in parallel, in order to estimate the collision probability and to know how experien
+The risk value is computed by `RobotTaskRisk` with the `getRiskValueWithHumanTask(HumanTaskRisk humanTask)` function. This method also needs to know the human task that is being carried out in parallel, in order to estimate the collision probability and to know how experienced the human is.
+It does not make sense, for the scope of our project, to assign a risk value to situations with no degree of collaboration. A robot which is working alone cannot harm any human, and a human working alone only needs its own risk estimation capabilities. However, some heuristic techniques may involve risk estimations that only involve one of the actors.
 
+Although risk only matters when both human and robot are working, we still had to design our implementation to allow for `Idle` tasks. `Idle` tasks only last a unit of time and they serve as a transition states between the completion of a task and the beginning of the next one. We decided, for the scope of our project, to have no risk when the robot is idle. However, if the robot is operating while the human is `Idle` (transitioning from a task to another), we consider a small risk because the human is still in the working area.
 
 Calculating makespan and risk this way worked well for our implementation, but more sophisticated strategies could be used.
-
-
-%%Use of heuristic risk or makespan calculations%%
-%%Talk about makespan%%
-%%Now talk about all the enums and explain each data that they have%%
-%%Now say that there is a different class to represent human tasks%%
-%%Say how risk and makespan are calculated%%
-%%Show differences%%
-%%Talk about the idle task%%
 
 ### The NodeRiskEvaluator Class
 
