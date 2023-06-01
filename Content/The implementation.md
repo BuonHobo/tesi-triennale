@@ -181,7 +181,25 @@ It makes sense to have all the logic regarding the evaluation of a plan inside i
 
 After receiving a search space node, the `RiskAssessmentSearchStrategy` passes it to the `NodeRiskEvaluator`. The evaluator gets the timelines of the robot and human components in the plan, and then parses the timelines from `List<DecisionVariable>` to `List<HumanTaskRisk>` and `List<RobotTaskRisk>`. 
 
-During the parsing of the timelines, the evaluator starts from 
+During the parsing of the timelines, the evaluator starts from $t=0$ and it progressively adds up the makespan data of each task in order to initialize tasks with the correct start time. This allows the evaluator to avoid losing information regarding concurrent tasks from different timelines.
+
+After this step, the `NodeRiskEvaluator` can finally start computing useful metrics, which we will explain below:
+
+`average risk` is the average risk value of a robot task in the evaluated plan.
+In order to calculate this value, the evaluator has to compute the risk of each task, but some robot tasks overlap with multiple human tasks. In that case, each possible overlap is considered and the final task risk value is the average of every overlap, weighted according to the overlap time interval.
+When all task risk values are evaluated, the average is returned.
+
+`max risk` is the risk value of the riskiest task in the current plan. The risk value is calculated in the same way as above. This value is needed because the average risk is a flat value and it doesn't allow us to know how risk is distributed across tasks. Knowing `max risk` helps us avoid plans where there are unreasonably high risk spikes.
+
+`possible collisions` is an array which indicates, for each target type, how many times human and robot are assigned the same task at the same time. Collisions are the riskiest situations, so knowing which and how many there are allows us to greatly reduce risk. Furthermore, reducing collisions can avoid safety stops, thus making the plan also more efficient.
+
+`best makespan` indicates the best estimate for the whole plan's makespan, which is calculated by choosing the biggest value between `human makespan` and `best robot makespan`.
+
+`human makespan` is the time it takes for the human to complete all of the tasks that were allocated to them.
+
+`best robot makespan` is the time it takes the robot to complete all of its tasks.
+
+`estimated robot makespan` is a version of the robot makespan where possibly colliding tasks are penalized with a time multiplier. This could be used in some search strategies to increase the impact that collisions have on th
 
 ## Utilities
 ### Python DDL generator

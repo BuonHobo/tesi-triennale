@@ -7,6 +7,7 @@
     - Disadvantages
 - PLATINUm
     - Implementation of timeline is based planning
+    - supports uncertainty
     - Used at CNR
     - Flexibility
     - Java
