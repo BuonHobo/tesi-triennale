@@ -7,7 +7,7 @@ The Representation Framework is responsible for representing the planning domain
 
 The Problem Solving component is responsible for generating plans that satisfy the given planning goals. It consists of a planner that uses search heuristics to leverage the hierarchical structure of the planning domain during plan generation. The planner is capable of dealing with temporal uncertainty during plan generation by leveraging information about the temporal uncertainty of the planning domain. This layer works in conjunction with the Representation Framework to support hierarchical modeling and solving of timeline-based planning problems under uncertainty. 
 
-The planner uses the information stored in the plan database, such as state variables, decomposition rules, and synchronization rules. It's aim is to synthesize a set of operations that, given an initial state, allow the system to reach a desired goal state. The reasoning process relies on a model which represents a general description of the problem to solve. The model provides a representation of the environment in terms of the possible states of the world and the actions the system can perform to interact with the environment.
+The planner uses the information stored in the plan database, such as state variables, decomposition rules, and synchronization rules. Its aim is to synthesize a set of operations that, given an initial state, allow the system to reach a desired goal state. The reasoning process relies on a model which represents a general description of the problem to solve. The model provides a representation of the environment in terms of the possible states of the world and the actions the system can perform to interact with the environment.
 
 Suitable plans are found through the use of a Search Strategy class, which determines how the planner explores the space of possible solutions in order to find a plan that achieves the desired goal state. The choice of search strategy can have a significant impact on the efficiency and effectiveness of the planning process. There are many search strategies that can be used by planners, each with its own strengths and weaknesses. Some common search strategies include depth-first search, breadth-first search, best-first search, and iterative deepening search. The choice of search strategy depends on factors such as the size and complexity of the problem space, the available computational resources, and the desired trade-off between speed and optimality.
 
@@ -38,7 +38,7 @@ We also compared our strategy against the PlannerSearchStrategy, which is provid
 
 ## Model implementation
 ### Risk factors
-In order to evaluate the risk factors of a task, and subsequently of a whole plan, we need to know which tasks PLATINUm is proposing for the current partial plan. Each `SearchSpaceNode` has a reference to a `Plan` class, which in turn has a `Map<DomainComponent, List<DecisionVariable>>`. Each component in the problem domain has its own timeline and we care about the timelines for the Human and Robot components.
+In order to evaluate the risk factors of a task, and subsequently of a whole plan, we need to know which tasks PLATINUm is proposing for the current partial plan. Each `SearchSpaceNode` has a reference to a `Plan` class, which in turn has a `Map<DomainComponent, List<DecisionVariable>>`. Each component in the problem domain has its own timeline, and we care about the timelines for the Human and Robot components.
 
 A timeline is represented with a `List<DecisionVariable>`, in the case of the Human and Robot components, each `DecisionVariable` represents a task. We can finally know what the task is by calling `task.getValue()` and parsing the string that this method returns.
 
@@ -97,7 +97,7 @@ For a robot task, on the other hand, makespan is obtained using the distance and
 The risk value is computed by `RobotTaskRisk` with the `getRiskValueWithHumanTask(HumanTaskRisk humanTask)` function. This method also needs to know the human task that is being carried out in parallel, in order to estimate the collision probability and to know how experienced the human is.
 It does not make sense, for the scope of our project, to assign a risk value to situations with no degree of collaboration. A robot which is working alone cannot harm any human, and a human working alone only needs its own risk estimation capabilities. However, some heuristic techniques may involve risk estimations that only involve one of the actors.
 
-Although risk only matters when both human and robot are working, we still had to design our implementation to allow for `Idle` tasks. `Idle` tasks only last a unit of time and they serve as a transition states between the completion of a task and the beginning of the next one. We decided, for the scope of our project, to have no risk when the robot is idle. However, if the robot is operating while the human is `Idle` (transitioning from a task to another), we consider a small risk because the human is still in the working area.
+Although risk only matters when both human and robot are working, we still had to design our implementation to allow for `Idle` tasks. `Idle` tasks only last a unit of time, and they serve as a transition states between the completion of a task and the beginning of the next one. We decided, for the scope of our project, to have no risk when the robot is idle. However, if the robot is operating while the human is `Idle` (transitioning from a task to another), we consider a small risk because the human is still in the working area.
 
 Calculating makespan and risk this way worked well for our implementation, but more sophisticated strategies could be used.
 
@@ -111,7 +111,7 @@ It makes sense to have all the logic regarding the evaluation of a plan inside i
 
 After receiving a search space node, the `RiskAssessmentSearchStrategy` passes it to the `NodeRiskEvaluator`. The evaluator gets the timelines of the robot and human components in the plan, and then parses the timelines from `List<DecisionVariable>` to `List<HumanTaskRisk>` and `List<RobotTaskRisk>`. 
 
-During the parsing of the timelines, the evaluator starts from $t=0$ and it progressively adds up the makespan data of each task in order to initialize tasks with the correct start time. This allows the evaluator to avoid losing information regarding concurrent tasks from different timelines.
+During the parsing of the timelines, the evaluator starts from $t=0$, and it progressively adds up the makespan data of each task in order to initialize tasks with the correct start time. This allows the evaluator to avoid losing information regarding concurrent tasks from different timelines.
 After this step, the `NodeRiskEvaluator` can finally start computing useful metrics, which we will explain below:
 
 `average risk` is the average risk value of a robot task in the evaluated plan.
@@ -142,19 +142,19 @@ Then, the dominance condition is checked to see if one of the nodes has both a l
 If no node is dominant, then the `max risk` attribute is used to filter out plans with unreasonable risk spikes. 
 After that, the strategy chooses the plan with less possible collisions.
 If both plans have the same amount of collisions, then the one with the lowest `best makespan` is selected.
-If no node has been chosen yet, then the final decision is based on which one has the lowest `average risk`.
+In case no node has been picked yet, then the final decision is based on which one has the lowest `average risk`.
 
-All of the components involved in finding plans with good tradeoffs between risk and efficiency have been defined. Their effectiveness will be showcased with the help of an experiment, later on in the paper.
+All the components involved in finding plans with good tradeoffs between risk and efficiency have been defined. Their effectiveness will be showcased with the help of an experiment, later on in the paper.
 
 ## Utilities
 ### Python DDL generator
-PLATINUm requires the problem domain to be described in a separate `.ddl` text file, which has its own syntax. This file specifies the components involved in the plan, the values that their state variables can assume, the transition rules and constraints between different state variables, the kind parameters that are accepted for each task, etc.
+PLATINUm requires the problem domain to be described in a separate `.ddl` text file, which has its own syntax. This file specifies the components involved in the plan, the values that their state variables can assume, the transition rules and constraints between different state variables, the kind of parameters that are accepted for each task, etc.
 
-For the first few test runs, it was enough to write this file manually. However, as the plans start getting more complex, writing the `.ddl` file manually becomes repetitive, tedious and extremely time consuming. The file itself could get a thousand lines long and it would require us to specify each possible combination of parameters such as target, speed, trajectory, etc.
+For the first few test runs, it was enough to write this file manually. However, as the plans start getting more complex, writing the `.ddl` file manually becomes repetitive, tedious and extremely time consuming. The file itself could get a thousand lines long, and it would require us to specify each possible combination of parameters such as target, speed, trajectory, etc.
 
 It seemed necessary for us to write an automated tool which would enable us to quickly make variations and explore the problem space. We chose to make this tool in python.
 
-The tool is highly configurable and it lets us precisely tweak all the relevant properties of a planning problem. 
+The tool is highly configurable, and it lets us precisely tweak all the relevant properties of a planning problem. 
 
 The first relevant parameter is a map, where we can specify what kind of targets are allowed and what intrinsic risk is associated with them. This makes it easy to add new targets with new intrinsic risk values. Different targets are allowed to have the same risk value. When adding a target or an intrinsic risk value, the parameter Enums in the java implementation must be updated to contain the same parameter and the associated risk and makespan data.
 
