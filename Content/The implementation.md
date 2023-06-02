@@ -233,7 +233,15 @@ The first relevant parameter is a map, where we can specify what kind of targets
 MATERIAL_RISK_VALUES = {"foam": "low", "wood": "medium", "metal": "high"}
 ```
 
-For each of these targets, we can also specify an amount of associated task. 
+For each of these targets, we can also specify the amount of associated tasks. The tool also lets us specify how many of those tasks can be carried out by both the robot and the human, or just one of them.
+
+```python
+MATERIAL_COORDINATION_AMOUNT_VALUES = {  
+	"foam" : {"human": 3, "robot": 3, "": 0},  
+	"wood" : {"human": 3, "robot": 3, "": 0},  
+	"metal": {"human": 3, "robot": 3, "": 0},  
+}
+```
 
 %%
 - talk about how ddl is structured
