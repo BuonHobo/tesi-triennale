@@ -221,9 +221,26 @@ All of the components involved in finding plans with good tradeoffs between risk
 ### Python DDL generator
 PLATINUm requires the problem domain to be described in a separate `.ddl` text file, which has its own syntax. This file specifies the components involved in the plan, the values that their state variables can assume, the transition rules and constraints between different state variables, the kind parameters that are accepted for each task, etc.
 
-For the first few test runs, it was enough to write this file manually. However, as the plans start getting more complex, writing the `.ddl` file manually becomes repetitive, tedious and extremely time consuming. 
+For the first few test runs, it was enough to write this file manually. However, as the plans start getting more complex, writing the `.ddl` file manually becomes repetitive, tedious and extremely time consuming. The file itself could get a thousand lines long and it would require us to specify each possible combination of parameters such as target, speed, trajectory, etc.
 
-It seemed necessary for us to write an automated tool 
+It seemed necessary for us to write an automated tool which would enable us to quickly make variations and explore the problem space. We chose to make this tool in python.
+
+The tool is highly configurable and it lets us precisely tweak all the relevant properties of a planning problem. 
+
+The first relevant parameter is a map, where we can specify what kind of targets are allowed and what intrinsic risk is associated with them. This makes it easy to add new targets with new intrinsic risk values. Different targets are allowed to have the same risk value. When adding a target or an intrinsic risk value, the parameter Enums in the java implementation must be updated to contain the same parameter and the associated risk and makespan data.
+
+```python
+MATERIAL_RISK_VALUES = {"foam": "low", "wood": "medium", "metal": "high"}
+```
+
+For each of these targets, we can also specify an amount of associated task. 
+
+%%
+- talk about how ddl is structured
+	- pdl too
+- details about configuration options
+- flexible
+%%
 
 ### The DataCollector Class
 
