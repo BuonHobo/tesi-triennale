@@ -173,20 +173,20 @@ MATERIAL_COORDINATION_AMOUNT_VALUES = {
 ```
 
 The tool also allows us to define all the possible trajectory and speed parameters, as well as the human's expertise level.
-The python code is highly modular and it is based on layered functions with different abstraction levels, it is easy to modify any part of the generated `.ddl` files by changing the associated function in the generator. 
+The python code is highly modular, and it is based on layered functions with different abstraction levels, it is easy to modify any part of the generated `.ddl` files by changing the associated function in the generator. 
 
-These functions are only responsible for generating working code, so the tool does a post processing step on the generated file content in order to fix the indentation and make it more human readable. However, in most if not all cases, quickly reading the configuration parameters of the python script was enough to understand exactly what the `.ddl` file describes to PLATINUm in hundreds of lines.
+These functions are only responsible for generating working code, so the tool does a post-processing step on the generated file content in order to fix the indentation and make it more human-readable. However, in most if not all cases, quickly reading the configuration parameters of the python script was enough to understand exactly what the `.ddl` file describes to PLATINUm in hundreds of lines.
 
 ### The DataCollector Class
 In order to test our search strategies and gather data about their effectiveness at finding plans with our desired qualities, we had to face some challenges.
 Finding the solution for a complex plan can be a very hard and time consuming task for PLATINUm, especially for problems with very little constraints on the state variables. 
-Having few constraints means that PLATINUm has to make a large number of choices and compare a lot of different partial plans.
+Having few constraints means that PLATINUm has to make numerous choices and compare a lot of different partial plans.
 
 Unfortunately, our problems were meant to test and showcase the search strategy's effectiveness at making choices and tradeoffs, so a high branching factor was not something we could avoid.
 The time to plan a single schedule was not exceptionally high, but running extensive benchmarks meant that we had to run the program hundreds of times, for a total runtime of many hours.
 
 The only solution was letting it run overnight, so a tool was needed to manage many runs over an extended period of time, collect the data and store it in a useful format.
-This is where de `DataCollector` class comes in. This tool takes a set of search strategies and a folder with `.ddl` files in it as input, and it outputs a single csv files with all the data it collected during hours of planning.
+This is where de `DataCollector` class comes in. This tool takes a set of search strategies and a folder with `.ddl` files in it as input, and it outputs a single `.csv` files with all the data it collected during hours of planning.
 
 ### Python chart generator
 Finally, we needed tools to visualize the collected data in order to know how our `RiskAssessmentSearchStrategy` compared to the other ones. 
@@ -194,7 +194,7 @@ The solution we opted for was a python tool capable of using the single `.csv` f
 
 The tool uses popular and well-tested data science libraries such as `pandas`, `numpy`, `matplotlib` and `seaborn`. It is composed of two main files.
 
-The first file contains many separate and independent functions. All these functions have the same structure:
+The first file contains many independent functions. All these functions have the same structure:
 
 ```python
 def a_beautiful_graph(data: DataFrame, dest: str):
