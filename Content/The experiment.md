@@ -14,6 +14,7 @@
 - Results from the experiment
     - Gathering detailed data proved crucial in determining the quality of the model
         - What runs we did
+            - how many of each kind
             - Changed shared value
             - Changed expertise value
             - only 6 cubes for each type (too slow)
