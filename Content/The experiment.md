@@ -58,9 +58,20 @@
     - Considerations about the expertise value
         - Human takes more time to do tasks, so there are more collisions
         - Planner struggles to avoid collisions with an incompetent human
-- Avoiding collisions is great for both safety and efficiency
-    - The MakespanPlanner doesn’t account for collisions, but collisions increase makespan
-    - Probably more than the RiskAssessmentPlanner
+    - Avoiding collisions is great for both safety and efficiency
+	- The MakespanPlanner doesn’t account for collisions, but collisions increase makespan
+	- Probably more than the RiskAssessmentPlanner
 
 ## Objective
-In order to test and showcase our model and implementation's effectiveness at finding good trade offs between risk and makespan, we decided to carry out an experiment. The experiment is based on 
+In order to assess the effectiveness of our model and its implementation, we decided to carry out an experiment. The experiment we're about to describe is inspired from the ShareWork mosaic [[Faroni2020]] and is meant to showcase the most relevant features of our framework.
+
+The first relevant feature is our planner's ability to sensibly assess the risk of a situation using our model. This would prove the effectiveness of our model and enable us and other researchers to build on these foundations and come up with new experiments and implementations that could further expand the possibilities of HRC.
+
+Then, the experiment should show that our implementation is effective at using its risk awareness to strike a good balance between risk and efficiency. As we said earlier, efficiency plays a crucial role in HRC and no progress can truly be made without taking it into account.
+
+A different property that the experiment is meant to show is our planner's ability to make good choices, and to come up with better plans when it is given more freedom. It would also be interesting to see what impact this freedom has on the planning time and measure the planner's scalability.
+
+Finally, we want to see how the robot reacts to different human expertise levels. A smart collaborative robot should be aware of who it is collaborating with and act accordingly.
+
+### The rules of the experiment
+The experiment is based on a series of Pick And Place operations, which is the most common kind of operation in HRC manufacturing. 
