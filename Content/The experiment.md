@@ -74,4 +74,26 @@ A different property that the experiment is meant to show is our planner's abili
 Finally, we want to see how the robot reacts to different human expertise levels. A smart collaborative robot should be aware of who it is collaborating with and act accordingly.
 
 ### The rules of the experiment
-The experiment is based on a series of Pick And Place operations, which is the most common kind of operation in HRC manufacturing. 
+The experiment is based on a series of Pick And Place operations, which is the most common kind of operation in HRC manufacturing. The robot and the human must collaborate to sort a set of cubes from a common working area into separated heaps, based on the cube's material.
+
+There are three kinds of cube: foam, wood and hot metal. Each of these materials have different intrinsic risks associated with them.
+Foam is safe for the robot to move because it is soft, so the possibility of accidentally hitting the human using a foam cube has a low severity.
+Wood is firm and it is a riskier to move, since hitting the human with a wooden cube might hurt them, especially if there is no personal protective equipment.
+Hot metal cubes are very risky for the robot to move, because hitting the human with it would almost probably cause injuries.
+
+Since there are only Pick And Place operations, and the same robot is doing them, this means that the intrinsic risk of a given task only depends on what kind of cube is being moved.
+Each Pick And Place task can be carried out with one of three different trajectories and one of three different speeds.
+The shortest trajectory is one that moves the cube over the working area and it could collide with the operator's head. This trajectory is the fastest one but it is also the riskiest one.
+There is also a trajectory that could collide with the human's chest, so it is safer but also slower.
+The last trajectory moves the cube under the working area, where it is slower and safer as it could only collide with the operator's feet.
+
+Each of these trajectories can be followed at a medium or high speed, thus making it faster but also riskier.
+
+In the experiment there is only one human with one of two levels of experienced that are the same for the whole duration of the plan. The expertise level can be either high or low.
+
+All these rules are meant to make the planner face hard decisions where it has to choose between prioritizing safety or efficiency, so we can see what kind of balance it finds.
+
+## Setting up the experiment
+The first thing we did was defining a sensible set of precompiled data which would be fed into the algorithm. A good set of values is crucial in getting the best results out of a planner.
+![[Pasted image 20230603123336.png]]
+The image above shows 
