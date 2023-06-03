@@ -96,4 +96,8 @@ All these rules are meant to make the planner face hard decisions where it has t
 ## Setting up the experiment
 The first thing we did was defining a sensible set of precompiled data which would be fed into the algorithm. A good set of values is crucial in getting the best results out of a planner.
 ![[Pasted image 20230603123336.png]]
-The image above shows 
+The image above shows what the precompiled data looks like, and how it reflects the risk estimation that we intuitively and implicitly do as humans.
+
+The strategies we tested for this experiment are RiskAssessmentSearchStrategy, RiskSearchStrategy, MakespanStrategy, and the blind depth first one, which PLATINUm calls PlannerSearchStrategy.
+
+In order to 
