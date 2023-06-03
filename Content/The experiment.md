@@ -61,3 +61,6 @@
 - Avoiding collisions is great for both safety and efficiency
     - The MakespanPlanner doesn’t account for collisions, but collisions increase makespan
     - Probably more than the RiskAssessmentPlanner
+
+## Objective
+In order to test and showcase our model and implementation's effectiveness at finding good trade offs between risk and makespan, we decided to carry out an experiment. The experiment is based on 
