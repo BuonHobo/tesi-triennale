@@ -1,3 +1,4 @@
+- shows that it is possible to improve this thing
 - Actual simulations of the plan could be run with ROS in order to show that avoiding collision is powerful
 - Other ideas sprinkled in the article
 - Work could be done to make the planner more reactive to the experience level of the human
