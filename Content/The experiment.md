@@ -100,4 +100,18 @@ The image above shows what the precompiled data looks like, and how it reflects 
 
 The strategies we tested for this experiment are RiskAssessmentSearchStrategy, RiskSearchStrategy, MakespanStrategy, and the blind depth first one, which PLATINUm calls PlannerSearchStrategy.
 
-In order to 
+In order to have an accurate depiction of the quality of our tools, we decided to make many variations of the experiment with varying properties and see how the final result changes. We decided that each experiment should have 6 cubes of each kind, because having less would reduce the amount of choices that the planner has to take and having more would make the planner too slow.
+
+In the different variations, there is a varying amount of shared tasks between the human and the robot. There are variations where 0 tasks are shared and both the human and the robot have been allocated 3 cubes of each kind. This is the lowest decision freedom that the planner had to work with, we went from 0 up to 6, in steps of 2.
+
+For each of the variations with different amounts of shared cubes, there are 2 cases: one where the human is experienced and one where the human is unexperienced. This will allow us to see how the planners react to every combination of parameters.
+
+There are 2 expertise values and 4 shared amounts, so there are 8 plan variations. Each of the 4 tested strategies will run 5 times per variation, for a total of 160 runs.
+
+The best way to know which strategy behaves best is to evaluate their plans using the NodeRiskEvaluator class mentioned earlier. The final dataset will contain all the data points calculated by the evaluator for each run.
+
+We also tried to do the experiment multiple times, with different sets of precompiled data, we will elaborate further on this when discussing the results.
+
+The benchmark took almost 4 hours to complete on a computer with a Ryzen 3600 CPU and 16 GB of RAM.
+
+## Results
