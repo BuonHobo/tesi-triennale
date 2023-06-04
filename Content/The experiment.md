@@ -115,3 +115,16 @@ We also tried to do the experiment multiple times, with different sets of precom
 The benchmark took almost 4 hours to complete on a computer with a Ryzen 3600 CPU and 16 GB of RAM.
 
 ## Results
+
+### Graphs
+We will now show and explain the graphs made by our python tool.
+
+![[Pasted image 20230604103153.png]]
+This graph shows how the time to find a suitable plan changes for each strategy, and how increasing the shared amount impacts the planning time.
+Planner is consistently the fastest one because it's only concerned with plan suitability and is not aware of safety or efficiency. The other strategies behave similarly, with RiskPlanner being the one suffering the most from a higher amount of shared cubes.
+As we said earlier, a higher shared amount means that PLATINUm has to work with a much higher branching factor, thus taking more time to find a solution.
+
+![[risk_makespan_shared.png]]
+This scatter plot shows how each strategy finds its balance between risk and efficiency. The data points are grouped by expertise and shared values. The most relevant part of the graph is on the right and it shows how RIskAssessmentPlanner is consistently safer than MakespanPlanner, and also faster than both Planner and RiskPlanner.
+We can see that when the human is less experienced the RiskAssessmentPlanner is aware of the increased risk and tries to make safer plans that take longer to execute as a response.
+Some data points appear to be missing from the groups with less shared cubes.
