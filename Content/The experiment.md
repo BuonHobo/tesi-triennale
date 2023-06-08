@@ -130,3 +130,18 @@ We can see that when the human is less experienced the RiskAssessmentPlanner is 
 Some data points appear to be missing from the groups with fewer shared cubes, this is due to their risk value being too low to be represented in this logarithmic scale in a satisfying way. To make them visible, we also included a linearly scaled version of this graph.
 
 ![[Resources/graphs/all_data5.csv/risk_makespan_shared_linear.png]]
+
+Grouping these data points by the amount of shared cubes makes it easy to compare different strategies in similar conditions, but it is not the best to see how a strategy behaves as the amount of shared cubes changes.
+
+![[Resources/graphs/all_data5.csv/risk_makespan_strategy.png]]
+We included this version of the graph (and its respective linearly scaled version) to show how the RiskAssessmentPlanner gets better at trading safety for efficiency as it is gradually given more freedom of choice.
+
+![[Resources/graphs/all_data5.csv/risk_makespan_strategy_linear.png]]
+
+The Risk-Makespan based graphs do a good job at showing how the strategies behave and how RiskAssessmentPlanner find the best balance between safety and efficiency when it is given more freedom. However, a flat risk value might not be the best way to qualitatively analyse the plans that each strategy comes up with.
+Fortunately, we also collected data about the allocation of tasks, so we can use that to better understand how our planners behave.
+
+![[Resources/graphs/all_data5.csv/task_strategy.png]]
+This graph shows runs where the amount of shared cubes is 6, when the planners are completely free to choose how to allocate tasks.
+We can see how MakespanPlanner tries to optimize for speed and parallelism with foam and wood cubes, while it tries to move all the metal cubes. This is because the human is slower at moving metal cubes, so the planner wants to compensate by allocating most metal cubes to the robot.
+The Planner makes no distinction between human, robot or different kinds of tasks. So it generally resorts to assigning most tasks to the robot. Which defeats the purpose 
