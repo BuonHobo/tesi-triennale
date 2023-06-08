@@ -3,6 +3,7 @@
     - DiapEsperiemento
     - DiapGrafici
 
-## The model
 
-During the 
+We 
+## The model
+During the research phases that we went through when defining a new model, we also 
