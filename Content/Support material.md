@@ -2,3 +2,7 @@
     - DiapTirocinio
     - DiapEsperiemento
     - DiapGrafici
+
+## The model
+
+During the 

@@ -1,67 +1,3 @@
-- Objective of the experiment
-    - Based on the ShareWork mosaic experiment
-    - Showcase the planner’s capability to find tradeoffs between risk and makespan
-    - Show how the solutions improve as the planner has more freedom
-- The rules of the experiment
-    - The 3 cubes
-    - 3 speeds
-    - 3 trajectories
-    - experienced/unexperienced human
-    - both can handle each type of cube (with varying constraints)
-    - cubes are in a common working area
-    - each type of cube is stacked in a different place
-- Example of pre-compiled data
-- Results from the experiment
-    - Gathering detailed data proved crucial in determining the quality of the model
-        - What runs we did
-            - how many of each kind
-            - Changed shared value
-            - Changed expertise value
-            - only 6 cubes for each type (too slow)
-        - Runs with different risk values
-        - Tested strategies
-            - Risk
-            - Makespan
-            - Blind
-            - RiskAssessment
-    - PC specs/overnight run
-    - Final graphs
-        - time to plan
-            - Blind is the fastest because it only cares about feasibility
-            - more shared, more time
-        - risk-makespan (2)
-            - shared value has great impact on plan quality
-            - expertise value increases risk, and robot tries to go slower
-            - the amount of data allows for finer tuning
-        - We need a better metric to appreciate the plan quality, risk value is not enough
-            - Let’s see tasks
-        - task allocation
-            - shared=6
-            - Makespan assigns a lot of tasks to the robot because it’s faster
-                - A lot of metal because the human is slower at moving metal
-            - Planner blindly assigns almost everything to the robot
-                - defeats the purpose
-                - a robot working alone is not a threat
-            - RiskAssessment avoids assigning too many woods and metals to the robot, while foam is safer
-            - Risk tries to avoid metal and wood
-        - The data allows us to do more, we can see collisions
-        - possible collisions
-            - Makespan has many collisions because it goes for parallelism
-            - Planner is blind and it is not aware of collisions
-            - RiskAssessment was able to avoid metal and wood collisions even when it had constraints
-                - it’s more relaxed with foam
-            - Risk avoids every collision that is not foam
-        - collision score-makespan
-            - We still have confirmation of how much better the RiskAssessment is
-    - Increasing freedom gives better plans at the cost of planning time
-    - Failed iterations of the experiment with bad graphs
-    - Considerations about the expertise value
-        - Human takes more time to do tasks, so there are more collisions
-        - Planner struggles to avoid collisions with an incompetent human
-    - Avoiding collisions is great for both safety and efficiency
-	- The MakespanPlanner doesn’t account for collisions, but collisions increase makespan
-	- Probably more than the RiskAssessmentPlanner
-
 ## Objective
 In order to assess the effectiveness of our model and its implementation, we decided to carry out an experiment. The experiment we're about to describe is inspired from the ShareWork mosaic [[Faroni2020]] and is meant to showcase the most relevant features of our framework.
 
@@ -104,7 +40,7 @@ In order to have an accurate depiction of the quality of our tools, we decided t
 
 In the different variations, there is a varying amount of shared tasks between the human and the robot. There are variations where 0 tasks are shared and both the human and the robot have been allocated 3 cubes of each kind. This is the lowest decision freedom that the planner had to work with, we went from 0 up to 6, in steps of 2.
 
-For each of the variations with different amounts of shared cubes, there are 2 cases: one where the human is experienced and one where the human is unexperienced. This will allow us to see how the planners react to every combination of parameters.
+For each of the variations with different amounts of shared cubes, there are 2 cases: one where the human is experienced and one where the human is unexperienced. This allows us to see how the planners react to every combination of parameters.
 
 There are 2 expertise values and 4 shared amounts, so there are 8 plan variations. Each of the 4 tested strategies will run 5 times per variation, for a total of 160 runs.
 
@@ -125,9 +61,9 @@ Planner is consistently the fastest one because it's only concerned with plan su
 As we said earlier, a higher shared amount means that PLATINUm has to work with a much higher branching factor, thus taking more time to find a solution.
 
 ![[Resources/graphs/all_data5.csv/risk_makespan_shared.png]]
-This scatter plot shows how each strategy finds its balance between risk and efficiency. The data points are grouped by expertise and shared values. The most relevant part of the graph is on the right and it shows how RIskAssessmentPlanner is consistently safer than MakespanPlanner, and also faster than both Planner and RiskPlanner.
-We can see that when the human is less experienced the RiskAssessmentPlanner is aware of the increased risk and tries to make safer plans that take longer to execute as a response.
-Some data points appear to be missing from the groups with fewer shared cubes, this is due to their risk value being too low to be represented in this logarithmic scale in a satisfying way. To make them visible, we also included a linearly scaled version of this graph.
+This scatter plot shows how each strategy finds its balance between risk and efficiency. The data points are grouped by expertise and shared values. The most relevant part of the graph is on the right, and it shows how RIskAssessmentPlanner is consistently safer than MakespanPlanner, and also faster than both Planner and RiskPlanner.
+We can see that when the human is less experienced, the RiskAssessmentPlanner is aware of the increased risk and tries to make safer plans that take longer to execute as a response.
+Some data points appear to be missing from the groups with fewer shared cubes, this is due to their risk value being too low to be represented in this logarithmic scale satisfyingly. To make them visible, we also included a linearly scaled version of this graph.
 
 ![[Resources/graphs/all_data5.csv/risk_makespan_shared_linear.png]]
 
@@ -138,13 +74,13 @@ We included this version of the graph (and its respective linearly scaled versio
 
 ![[Resources/graphs/all_data5.csv/risk_makespan_strategy_linear.png]]
 
-The Risk-Makespan based graphs do a good job at showing how the strategies behave and how RiskAssessmentPlanner find the best balance between safety and efficiency when it is given more freedom. However, a flat risk value might not be the best way to qualitatively analyse the plans that each strategy comes up with.
+The Risk-Makespan based graphs do a good job at showing how the strategies behave and how RiskAssessmentPlanner find the best balance between safety and efficiency when it is given more freedom. However, a flat risk value might not be the best way to qualitatively analyze the plans that each strategy comes up with.
 Fortunately, we also collected data about the allocation of tasks, so we can use that to better understand how our planners behave.
 
 ![[Resources/graphs/all_data2.csv/task_strategy.png]]
 This graph shows runs where the amount of shared cubes is 6, when the planners are completely free to choose how to allocate tasks.
 We can see how MakespanPlanner tries to optimize for speed and parallelism with foam and wood cubes, while it tries to move all the metal cubes. This is because the human is slower at moving metal cubes, so the planner wants to compensate by allocating most metal cubes to the robot.
-The Planner makes no distinction between human, robot or different kinds of tasks. So it generally resorts to assigning most tasks to the robot, which removes any level of collaboration. This might be safer in some cases but it defeats the purpose of HRC.
+The Planner makes no distinction between human, robot or different kinds of tasks. So it generally resorts to assigning most tasks to the robot, which removes any level of collaboration. This might be safer in some cases, but it defeats the purpose of HRC.
 RiskAssessmentPlanner clearly tries to achieve some sort of parallelism and collaboration, but it still tries to allocate tasks in a way that makes it safer for the human. The robot is assigned less metal cubes because it is safer to have the human handle those, while foam cubes are safer and more often assigned to the robot.
 RiskPlanner is extremely biased towards safety. It avoids allocating metal cubes to the robot, but it allows the robot to move most of the foam cubes.
 
@@ -155,18 +91,18 @@ This graph shows how many collisions of each kind happen with each strategy. Thi
 MakespanPlanner generates many collisions because it tries to increase parallelism.
 Planner is not aware of collisions, so it blindly generates a great deal of them.
 RiskAssessmentPlanner allows foam collisions, which are the safest, but it manages to strongly avoid collisions with wood, and has almost no collisions with metal.
-RiskPlanner allows foam collisions and it managed to have exactly zero collisions of metal and wood cubes.
+RiskPlanner allows foam collisions, and it managed to have exactly zero collisions of metal and wood cubes.
 
 Now that we have this useful information about collision, we can plot this against makespan to see a different perspective on the safety-efficiency trade off.
 
 ![[Resources/graphs/all_data5.csv/collisionscore_makespan_shared.png]]
-The collision score used in the y axis is calculated by taking a weighted sum of the collisions from each run, according to how dangerous a given collision is.
-We can easily see how RiskAssessmentPlanner is still consistently the best one at finding tradeoffs between risk and efficiency. It ensures a low amount of collisions and they're mostly foam collisions, which are the safest ones.
+The collision score used in the y-axis is calculated by taking a weighted sum of the collisions from each run, according to how dangerous a given collision is.
+We can easily see how RiskAssessmentPlanner is still consistently the best one at finding tradeoffs between risk and efficiency. It ensures a low amount of collisions, and they're mostly foam collisions, which are the safest ones.
 
-It could be argued that, in a real life scenario, the RiskAssessmentPlanner schedules would execute faster than the MakespanPlanner ones. The reason being that the dramatically lower amount of collisions would translate to a much lower amount of safety stops, which are the main cause of HRC slow downs. This means that risk aware planning is not only a great way to improve safety in the HRC working environment, but it can also be the best way to improve efficiency as well.
+It could be argued that, in a real life scenario, the RiskAssessmentPlanner schedules would execute faster than the MakespanPlanner ones. The reason being that the dramatically lower amount of collisions would translate to a much lower amount of safety stops, which are the main cause of HRC slow-downs. This means that risk aware planning is not only a great way to improve safety in the HRC working environment, but it can also be the best way to improve efficiency as well.
 
 It is clear how a greater amount of freedom results in better plans at the cost of higher planning time, which is then paid back with potentially more efficient plans.
 
-It can also be noted how the planners struggle a bit to avoid collisions with an unexperienced human. This could be due to the fact that, in these simulations, the unexperienced human takes longer to accomplish tasks and the robot is not able to wait for it to finish, so it could get in the way.
+It can also be noted how the planners struggle a bit to avoid collisions with an inexperienced human. This could be due to the fact that, in these simulations, the inexperienced human takes longer to accomplish tasks and the robot is not able to wait for it to finish, so it could get in the way.
 
-These results are also a testament of how powerful fine-tuning can be when looking for better plans
+These results are also a testament of how powerful fine-tuning can be when looking for better plans, as three different datasets were collected with different parameters before this one. They generally showed the same properties, but fine-tuning allowed us to decrease the number of collisions. Even better results would probably be achieved with more fine-grained data and refined parameters. 
