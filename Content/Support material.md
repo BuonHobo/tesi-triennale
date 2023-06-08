@@ -9,4 +9,14 @@ These documents were useful to us during the development phases and will probabl
 ## The model
 During the research phases that we went through when defining a new model, we made a document explaining the main ideas behind our model, the significance of each of the parameters and ideas for runtime and plantime implementations. This presentation also includes the main advantages and disadvantages of our proposed method.
 
+![[Pasted image 20230608154121.png]]
+
 ## The Experiment
+We made a presentation explaining the objectives and reasoning behind the experiment. The document also includes the rules of the experiment, images describing the kinds of cube and an example of precompiled data.
+
+![[Pasted image 20230608154147.png]]
+
+## The Results
+The last document we made is a detailed presentation about what parameters we collected during the benchmark phase. It includes a step by step explanation of each graph that we made.
+
+![[Pasted image 20230608154439.png]]
