@@ -1,11 +1,11 @@
 - We used AI planning (briefly)
     - What is AI planning
     - How it works
-- Timeline based planning
+- Timeline based planning (basato sul documento della cialdea)
     - How it works (model, problem)
     - Advantages
     - Disadvantages
-- PLATINUm
+- PLATINUm (basato sul phd)
     - Implementation of timeline is based planning
     - supports uncertainty
     - Used at CNR
