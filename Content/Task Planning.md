@@ -1,22 +1,10 @@
-- AI Planning
-    - What is AI planning
-    - How it works
-- Timeline based planning
-    - How it works (model, problem)
-    - Advantages
-    - Disadvantages
-- PLATINUm
-    - Implementation of timeline is based planning
-    - supports uncertainty
-    - Used at CNR
-    - Flexibility
-    - Java
-
 ## AI Planning
 
 In today's rapidly evolving world, the ability to automate decision-making processes and plan complex actions is of paramount importance. Artificial Intelligence (AI) planning has emerged as a subfield of AI that addresses this need. AI planning focuses on generating plans or sequences of actions to accomplish predefined objectives. It involves constructing a plan that transforms an initial state of a system into a desired goal state. AI planning algorithms utilize domain knowledge and search techniques to efficiently explore the space of possible plans and identify the most optimal or feasible solution.
 
 The process of AI planning involves several key components. Firstly, the representation of states, actions, and goals provides a formal framework for describing the problem domain. States represent the different configurations of the system, actions capture the atomic units of change that transform one state to another, and goals specify the desired end-state to be achieved. Secondly, the planning algorithm utilizes search techniques to traverse the space of possible states and actions, aiming to find a sequence of actions that satisfies the specified goals. The algorithm may employ heuristic functions to guide the search process efficiently. Ultimately, AI planning produces a plan, which is a sequence of actions that, when executed, achieves the desired goals.
+
+AI planning proves particularly valuable in human-robot collaboration (HRC), where coordination and synchronization are essential. It enables the generation of plans that align the actions of robots with human collaborators' temporal expectations and constraints, facilitating seamless integration and improving safety, productivity, and overall task performance. In the subsequent sections, we will explore timeline-based planning, discuss its advantages and disadvantages, delve into the implementation of PLATINUm as an example, and highlight its flexibility, support for uncertainty, and relevance in HRC, including its application at CNR.
 
 ## Timeline-based planning
 
@@ -34,15 +22,15 @@ While timeline-based planning provides significant benefits, it also presents so
 
 However, the benefits of accurate temporal coordination in HRC scenarios often outweigh these challenges, as it improves safety, efficiency, and overall task performance. In HRC scenarios, where humans and robots work together, timeline-based planning can ensure that the robot's actions align with the temporal expectations of the human collaborator. This synchronization is crucial for smooth and effective coordination between humans and robots.
 
-Overall, timeline-based planning provides a powerful framework for dealing with complex planning problems that involve temporal constraints and uncertainty. It offers a rigorous and intelligent approach to modeling and solving real-world problems.
+Overall, timeline-based planning provides a powerful framework for dealing with complex planning problems that involve temporal constraints and uncertainty. It offers a rigorous and intelligent approach to modeling and solving real-world issues.
 
 ## PLATINUm
 
-PLATINUm [[umbrico2017platinum]] (Planning and Acting with TImeliNes under Uncertainty) is a new planning framework developed at CNR (Consiglio Nazionale delle Ricerche) that advances the state of the art with the ability to deal with temporal uncertainty both at the planning and plan execution level. It is a comprehensive planning system endowed with a new algorithm for temporal planning with uncertainty, heuristic search capabilities grounded on hierarchical modeling, and a robust plan execution module to address temporal uncertainty while executing plans .
+PLATINUm [[umbrico2017platinum]] (Planning and Acting with TImeliNes under Uncertainty) is a new planning framework developed at CNR (Consiglio Nazionale delle Ricerche) that advances the state of the art with the ability to deal with temporal uncertainty both at the planning and plan execution level. It is a comprehensive planning system endowed with a new algorithm for temporal planning with uncertainty, heuristic search capabilities grounded on hierarchical modeling, and a robust plan execution module to address temporal uncertainty while executing plans.
 
-PLATINUm has been successfully deployed in a manufacturing scenario to support Human-Robot Collaboration. The system has been developed and deployed within the FourByThree research project . The PLATINUm planning and acting capabilities have been integrated into a software environment that facilitates the adaptation of a new robotic arm in different HRC manufacturing scenarios. The proposed planning system has been completely deployed in a realistic case study, demonstrating its ability to support productive and safe collaboration between human and robot .
+PLATINUm has been successfully deployed in a manufacturing scenario to support Human-Robot Collaboration. The system has been developed and deployed within the FourByThree research project. The PLATINUm planning and acting capabilities have been integrated into a software environment that facilitates the adaptation of a new robotic arm in different HRC manufacturing scenarios. The proposed planning system has been completely deployed in a realistic case study, demonstrating its ability to support productive and safe collaboration between human and robot.
 
-One of the key strengths of PLATINUm is its ability to handle temporal uncertainty both at planning and execution time. This allows the framework to address problems where not all features of a domain are under the control of the system. Moreover, the combination of temporal flexibility and temporal uncertainty allows P&S controllers to generate flexible and temporally robust plans that can be dynamically adapted at execution time without generating new plans from scratch .
+One of the key strengths of PLATINUm is its ability to handle temporal uncertainty, both at planning and execution time. This allows the framework to address problems where not all features of a domain are under the control of the system. Moreover, the combination of temporal flexibility and temporal uncertainty allows P&S controllers to generate flexible and temporally robust plans that can be dynamically adapted at execution time without generating new plans from scratch.
 
 PLATINUm is implemented in Java, a portable and robust programming language with a vast ecosystem of libraries and tools. Java's platform independence enables PLATINUm to run on various operating systems, while its object-oriented nature promotes modular and maintainable code for extensibility and long-term maintenance.
 
