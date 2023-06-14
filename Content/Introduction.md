@@ -1,0 +1,2 @@
+The rising popularity of robots in production plants has greatly improved the throughput and efficiency of factories in the recent years. The introduction of robots in this environments allows businesses to automate hard, dangerous and repetitive tasks. 
+However, this transition requires expensive upgrades and it sacrifices the flexibility and dexterity inherent to human workers. Furthermore, these f
